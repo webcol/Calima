@@ -1,3 +1,5 @@
+<?php
+
 class Km_Bootstrap
 {
     public static function run(Km_Solicitud $peticion)
