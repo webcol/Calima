@@ -12,7 +12,7 @@
     <link href="<?php echo $_layoutParams['ruta_css']; ?>bootstrap.css" rel="stylesheet" type="text/css" />
 
     <!-- Add custom CSS here -->
-    <link href="<?php echo $_layoutParams['ruta_css']; ?>sb-admin.css" rel="stylesheet">
+    <link href="<?php echo $_layoutParams['ruta_css']; ?>justified-nav.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo $_layoutParams['ruta_css']; ?>font-awesome/css/font-awesome.min.css">
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
