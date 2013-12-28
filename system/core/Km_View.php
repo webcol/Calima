@@ -16,8 +16,7 @@ class Km_View
         $_layoutParams = array(
             'ruta_css' => BASE_URL . 'mvc/views/layout/' . DEFAULT_LAYOUT . '/css/',
             'ruta_img' => BASE_URL . 'mvc/views/layout/' . DEFAULT_LAYOUT . '/img/',
-            'ruta_js' => BASE_URL . 'mvc/views/layout/' . DEFAULT_LAYOUT . '/js/',
-            'menu' => $menu
+            'ruta_js' => BASE_URL . 'mvc/views/layout/' . DEFAULT_LAYOUT . '/js/'
         );
         
         $rutaView = VIEW_PATH . $this->_controlador . DS . $vista . '.phtml';
