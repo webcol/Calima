@@ -29,7 +29,7 @@ class Km_View
             include_once ROOT . 'mvc/views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'footer.php';
         } 
         else {
-            throw new Exception('Error de vista');
+            throw new Exception('vista no encontrada');
         }
     }
 }
