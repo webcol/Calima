@@ -1,3 +1,5 @@
+<?php
+
 class Km_Solicitud
 {
     private $_controlador;
