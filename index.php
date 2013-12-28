@@ -20,7 +20,7 @@ require_once APP_PATH . 'Km_Registro.php';
 require_once APP_PATH . 'Km_Database.php';
 
 try{
-    Km_Bootstrap::run(new Km_Request);
+    Km_Bootstrap::run(new Km_Solicitud);
 }
 catch(Exception $e){
     echo $e->getMessage();
