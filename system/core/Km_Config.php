@@ -1,7 +1,7 @@
 <?php
 
 
-define('BASE_URL', 'localhost/kalima/');
+define('BASE_URL', '');
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'template');
 
