@@ -24,7 +24,7 @@ class Km_View
         if(is_readable($rutaView)){
             include_once ROOT . 'mvc/views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'header.php';
             include_once $rutaView;
-            include_once ROOT . 'mvc/views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'menu.php';
+            //include_once ROOT . 'mvc/views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'menu.php';
             include_once ROOT . 'mvc/views'. DS . 'layout' . DS . DEFAULT_LAYOUT . DS . 'footer.php';
         } 
         else {
