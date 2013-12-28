@@ -1,6 +1,6 @@
 class Km_Bootstrap
 {
-    public static function run(Km_Request $peticion)
+    public static function run(Km_Solicitud $peticion)
     {
         $controller = $peticion->getControlador() . 'Controller';
         //definimos la ruta al controlador
