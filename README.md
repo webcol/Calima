@@ -9,7 +9,7 @@ Desarrollado para usar el patron MVC
 
 corriendo sitios web y app con twitter bootstrap 3.1.1
 
-Trabajo para pregrado en Ing. Informatica
+Trabajo para presentar tesis de grado en Ing. Informatica
 
 Uniciencia - Cali
 
