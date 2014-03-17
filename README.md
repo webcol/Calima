@@ -17,4 +17,8 @@ Uniciencia - Cali
 
 www.webcol.net - ceo@webcol.net
 
-Agradecimientos especiales a Jaisiel Delance por sus videos
+Agradecimientos especiales a 
+Jaisiel Delance por sus videos
+A las personas que han a portado a desarrollo de Zend Framework
+A los que desarrollaron y aportan a codeingniter
+a Dios por darnos la posibilidad de aprender y hacer nuevos aportes a la informatica
