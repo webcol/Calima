@@ -5,7 +5,7 @@ Framework PHP en español
 
 Basado en Diferentes Frameworks PHP
 
-Desarrollado para usar el patron MVC
+Desarrollado para usar el patron HMVC
 
 corriendo sitios web y app con twitter bootstrap 3.1.1
 
