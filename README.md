@@ -13,11 +13,15 @@ Trabajo para presentar tesis de grado en Ing. Informatica
 
 Uniciencia - Cali
 
+Efrain Restrepo
 @efrasoft @webcolgroup
-
 www.webcol.net - ceo@webcol.net
 
+Johan Lopera
+
+
 Agradecimientos especiales a 
-A las personas que han a portado a desarrollo de Zend Framework
+A Dios por darnos la posibilidad de aprender y hacer nuevos aportes a la informatica
+A las personas que han aportado al desarrollo de Zend Framework
 A los que desarrollaron y aportan a codeingniter
-a Dios por darnos la posibilidad de aprender y hacer nuevos aportes a la informatica
+A Media Central Group por su ayuda en CSS y Diseño Graffico
