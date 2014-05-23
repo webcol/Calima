@@ -1,7 +1,7 @@
 <?php
 
 
-class Cf_View
+class Cf_Vista
 {
     private $_controlador;
     

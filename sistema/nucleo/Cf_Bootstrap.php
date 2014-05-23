@@ -6,7 +6,7 @@ class Cf_Bootstrap
     {
         $controller = $peticion->getControlador() . 'Controller';
         //definimos la ruta al controlador
-        $rutaControlador = ROOT . 'mvc' . DS .'controllers' . DS . $controller . '.php';
+        $rutaControlador = ROOT . 'mvc' . DS .'controladores' . DS . $controller . '.php';
         $metodo = $peticion->getMetodo();
         $args = $peticion->getArgs();
         
