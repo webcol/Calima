@@ -1,6 +1,6 @@
 <?php
 
-class indexController extends Km_Controller
+class indexController extends Cf_Controller
 {
     public function __construct() {
         parent::__construct();
@@ -8,7 +8,7 @@ class indexController extends Km_Controller
     
     public function index()
     {
-        $this->_view->titulo = 'KalimaFramework';
+        $this->_view->titulo = 'CalimaFramework';
         $this->_view->renderizar('index', 'inicio');
     }
 }

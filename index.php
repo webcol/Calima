@@ -12,11 +12,11 @@ define('APP_LIBS', ROOT . 'sistema'.DS.'libs' . DS);
 
 
 
-require_once APP_PATH . 'Km_Autocarga.php';
-require_once APP_PATH . 'Km_Config.php';
+require_once APP_PATH . 'Cf_Autocarga.php';
+require_once APP_PATH . 'Cf_Config.php';
 
 try{
-    Km_Bootstrap::run(new Km_Solicitud);
+    Cf_Bootstrap::run(new Cf_Solicitud);
 }
 catch(Exception $e){
     echo $e->getMessage();

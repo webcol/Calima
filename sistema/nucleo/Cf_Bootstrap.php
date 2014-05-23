@@ -1,8 +1,8 @@
 <?php
 
-class Km_Bootstrap
+class Cf_Bootstrap
 {
-    public static function run(Km_Solicitud $peticion)
+    public static function run(Cf_Solicitud $peticion)
     {
         $controller = $peticion->getControlador() . 'Controller';
         //definimos la ruta al controlador

@@ -1,6 +1,6 @@
 <?php
 
-class Km_Solicitud
+class Cf_Solicitud
 {
     private $_controlador;
     private $_metodo;

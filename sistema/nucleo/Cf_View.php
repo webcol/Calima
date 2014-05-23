@@ -1,11 +1,11 @@
 <?php
 
 
-class Km_View
+class Cf_View
 {
     private $_controlador;
     
-    public function __construct(Km_Solicitud $peticion) {
+    public function __construct(Cf_Solicitud $peticion) {
         $this->_controlador = $peticion->getControlador();
     }
     

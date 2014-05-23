@@ -5,7 +5,7 @@ define('BASE_URL', '');
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'template');
 
-define('APP_NAME', 'KalimaFramework');
+define('APP_NAME', 'CalimaFramework');
 define('APP_SLOGAN', 'Framework MVC php');
 define('APP_COMPANY', 'www.webcol.net');
 
