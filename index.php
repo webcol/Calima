@@ -2,7 +2,7 @@
 
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', realpath(dirname(__FILE__)) . DS);
-define('APP_PATH', ROOT . 'sistema'.DS.'core' . DS);
+define('APP_PATH', ROOT . 'sistema'.DS.'nucleo' . DS);
 # define para mvc erp
 define('VIEW_PATH', ROOT . 'mvc'.DS.'views' . DS);
 define('CSS_PATH', ROOT . 'public_'.DS.'css' . DS);
