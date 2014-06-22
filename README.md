@@ -7,7 +7,7 @@ Basado en Diferentes Frameworks PHP
 
 Desarrollado para usar el patron MVC
 
-corriendo sitios web y app con twitter bootstrap 3.1.1
+Corriendo sitios web y app con twitter bootstrap 3.1.1
 
 Trabajo para presentar tesis de grado en Ing. Informatica
 
