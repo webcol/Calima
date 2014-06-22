@@ -18,7 +18,7 @@ Efrain Restrepo P
 www.webcol.net - ceo@webcol.net
 
 
-Agradecimientos especiales 
+Agradecimientos especiales<br> 
 A Dios por darnos la posibilidad de aprender y hacer nuevos aportes a la informática
 A las personas que han aportado al desarrollo de Zend Framework
 A los que desarrollaron y aportan a codeingniter
