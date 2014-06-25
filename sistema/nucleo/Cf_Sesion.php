@@ -1,6 +1,6 @@
 <?php
 
-class Km_Sesion
+class Cf_Sesion
 {
 
   public static function init()
@@ -12,7 +12,7 @@ class Km_Sesion
   {
     if($clave)
     {
-      if(is_array($clave)
+      if(is_array($clave))
       {
         for($i = 0; $i < count($clave); $i++)
         {

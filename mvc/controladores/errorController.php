@@ -21,7 +21,7 @@ class ErrorController extends Km_Controller
     {
       $codigo= $this->filtrarInt($codigo);
       if(is_int($codigo))
-      $codigo=$codigo
+      $codigo=$codigo;
     
     }
     else
@@ -31,7 +31,7 @@ class ErrorController extends Km_Controller
     
     $error['default']='Ha ocurrido un error';
     $error['5050']='Accesos Restringido';
-    if(array_key_exists($codigo, $error)
+    if(array_key_exists($codigo, $error))
     {
       return $error[$codigo];
     }
