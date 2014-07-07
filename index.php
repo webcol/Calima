@@ -25,7 +25,7 @@ require_once APP_PATH . 'Cf_Configuracion.php';
 
 
 try{
-  Cf_Bootstrap::run(new Cf_Solicitud);
+  Cf_Bootstrap::actuar(new Cf_Solicitud);
 }
 catch(Exception $e){
     echo $e->getMessage();

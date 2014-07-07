@@ -2,7 +2,7 @@
 
 class Cf_Bootstrap
 {
-    public static function run(Cf_Solicitud $peticion)
+    public static function actuar(Cf_Solicitud $peticion)
     {
         $controlador = $peticion->getControlador() . 'Controller';
         //definimos la ruta al controlador
