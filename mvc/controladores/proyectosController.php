@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class proyectosController extends Cf_Controller
+class proyectosController extends Cf_Controlador
 {
     public function __construct() {
         parent::__construct();

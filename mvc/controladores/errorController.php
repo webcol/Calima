@@ -1,6 +1,6 @@
 <?php
 
-class ErrorController extends Km_Controller
+class ErrorController extends Cf_Controlador
 {
 
   public function __construct()

@@ -1,6 +1,6 @@
 <?php
 
-abstract class Cf_Controller
+abstract class Cf_Controlador
 {
     protected $_view;
     

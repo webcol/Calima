@@ -1,6 +1,6 @@
 <?php
 
-class contactosController extends Cf_Controller
+class contactosController extends Cf_Controlador
 {
     public function __construct() {
         parent::__construct();

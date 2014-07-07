@@ -1,6 +1,6 @@
 <?php
 
-class indexController extends Cf_Controller
+class indexController extends Cf_Controlador
 {
     public function __construct() {
         parent::__construct();
