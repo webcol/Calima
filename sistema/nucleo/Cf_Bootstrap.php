@@ -4,18 +4,18 @@ class Cf_Bootstrap
 {
     public static function run(Cf_Solicitud $peticion)
     {
-        $controller = $peticion->getControlador() . 'Controller';
+        $controlador = $peticion->getControlador() . 'Controller';
         //definimos la ruta al controlador
-        $rutaControlador = ROOT . 'mvc' . DS .'controladores' . DS . $controller . '.php';
+        $rutaControlador = ROOT . 'mvc' . DS .'controladores' . DS . $controlador . '.php';
         $metodo = $peticion->getMetodo();
-        $args = $peticion->getArgs();
+        $args = $peticion->getArgumentos();
         
-        //verifcamos que el archivo existe is_readable
+        //verifcamos que el archivo existe con la funcion de PHP is_readable
         if(is_readable($rutaControlador)){
             require_once $rutaControlador;
-            $controller = new $controller;
+            $controlador = new $controlador;
             
-            if(is_callable(array($controller, $metodo))){
+            if(is_callable(array($controlador, $metodo))){
                 $metodo = $peticion->getMetodo();
             }
             else{
@@ -23,14 +23,14 @@ class Cf_Bootstrap
             }
             
             if(isset($args)){
-                call_user_func_array(array($controller, $metodo), $args);
+                call_user_func_array(array($controlador, $metodo), $args);
             }
             else{
-                call_user_func(array($controller, $metodo));
+                call_user_func(array($controlador, $metodo));
             }
             
         } else {
-            throw new Exception('no encontrado');
+            throw new Exception('Creemos que tienes un problema! controlador no encontado');
         }
     }
 }

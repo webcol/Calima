@@ -40,7 +40,7 @@ class Cf_Solicitud
         return $this->_metodo;
     }
     
-    public function getArgs()
+    public function getArgumentos()
     {
         return $this->_argumentos;
     }
