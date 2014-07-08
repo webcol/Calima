@@ -12,7 +12,7 @@ spl_autoload_register ( function ( $class )  {
         require  $path ; 
         return true;
      } 
-     $path  =  APP_PATH . $class . ".php" ;      
+     $path  =  RUTA_NUCLEO . $class . ".php" ;      
     if  ( file_exists ( $path ))  { 
         require  $path ; 
         return true;

@@ -7,20 +7,20 @@ defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)).DS);
 
 //define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', realpath(dirname(__FILE__)) . DS);
-define('APP_PATH', SITE_ROOT . 'sistema'.DS.'nucleo' . DS);
+define('RUTA_NUCLEO', SITE_ROOT . 'sistema'.DS.'nucleo' . DS);
 # define para mvc erp
 define('VIEW_PATH', SITE_ROOT . 'mvc'.DS.'vistas' . DS);
 define('CONTR_PATH', ROOT . 'mvc'.DS.'controladores' . DS);
 define('CSS_PATH', SITE_ROOT . 'public_'.DS.'css' . DS);
 define('IMG_PATH', SITE_ROOT . 'public_'.DS.'img' . DS);
 define('JS_PATH', SITE_ROOT . 'public_'.DS.'js' . DS);
-define('APP_LIBS', SITE_ROOT . 'sistema'.DS.'librerias' . DS);
+define('RUTA_LIBS', SITE_ROOT . 'sistema'.DS.'librerias' . DS);
 
 
 
 
-require_once APP_PATH . 'Cf_Autocarga.php';
-require_once APP_PATH . 'Cf_Configuracion.php';
+require_once RUTA_NUCLEO . 'Cf_Autocarga.php';
+require_once RUTA_NUCLEO . 'Cf_Configuracion.php';
 
 
 
