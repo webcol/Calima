@@ -1,11 +1,14 @@
 <?php
 
+//namespace sistema\nucleo;
+//use sistema\nucleo as nucleo;
+
 abstract class Cf_Controlador
 {
-    protected $_view;
+    protected $_vista;
     
     public function __construct() {
-        $this->_view = new Cf_Vista(new Cf_Solicitud);
+        $this->_vista = new Cf_Vista(new Cf_Solicitud);
     }
     
     protected function cargalib($libreria){

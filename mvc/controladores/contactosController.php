@@ -8,7 +8,7 @@ class contactosController extends Cf_Controlador
     
     public function index()
     {
-        $this->_view->titulo = 'CalimaFramework';
-        $this->_view->renderizar('index', 'inicio');
+        $this->_vista->titulo = 'CalimaFramework';
+        $this->_vista->renderizar('index', 'inicio');
     }
 }

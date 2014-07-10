@@ -1,15 +1,22 @@
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-d
+# Si es un archivo fisico, dejarlo pasar.
 RewriteCond %{REQUEST_FILENAME} !-f
+
 RewriteCond %{REQUEST_FILENAME} !-l
+
+
+
+
+
 
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
 
-
-#RewriteEngine On
-
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteCond %{REQUEST_FILENAME} !-f
-
-#RewriteRule ^(.*)$ index.php [R,L,NS]
+#RewriteCond %{REQUEST_FILENAME} .*jpg$ [NC]
+#RewriteCond %{HTTP_REFERER} !^$ 
+#RewriteCond %{HTTP_REFERER} !tuweb.com [NC] 
+#RewriteCond %{HTTP_REFERER} !webamigo.com [NC] 
+#RewriteCond %{HTTP_REFERER} !google. [NC] 
+#RewriteCond %{HTTP_REFERER} !search?q=cache [NC]
+#RewriteRule (.*) /hotlinks.php?src=$1
