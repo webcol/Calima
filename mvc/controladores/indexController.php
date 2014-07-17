@@ -12,6 +12,9 @@ class indexController extends Cf_Controlador
     
     public function index()
     {
+        $datas = $this->cargaMod('prueba');
+        $this->_vista->postear= $datas->llamarDatos();
+        
         $this->_vista->titulo = 'CalimaFramework';
         $this->_vista->renderizar('index', 'inicio');
     }
