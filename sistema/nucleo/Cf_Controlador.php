@@ -21,4 +21,22 @@ abstract class Cf_Controlador
             throw new Exception("Error al cargar libreria");
         }
     }
+    
+    protected function cargaMod($modelo){
+        $modelo=$modelo.'Modelo';
+       $rutaMod = RUTA_MOD . $modelo . '.php';
+        if(is_readable($rutaMod)){
+            require_once $rutaMod;
+            $modelo = new $modelo;
+            return $modelo;
+           //echo 'modelo cargado';
+        }
+        else {
+            //echo $rutaMod;
+            
+            
+            throw new Exception("Error al cargar el modelo");
+            
+        }
+    }
 }
