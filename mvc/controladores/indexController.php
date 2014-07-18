@@ -3,11 +3,17 @@
 class indexController extends Cf_Controlador
 {
     private $_exc;
+    private $_ayud;
     
     public function __construct() {
         parent::__construct();
-        $this->cargalib('PHPExcel');
-        $this->_exc = new PHPExcel;
+        $this->cargaLib('PHPExcel');
+        $this->_ayud = new PHPExcel;
+        
+        // cargamos la clase ayudantes para usar sus metodos de ayuda
+        $this->cargaAyudante('PHPAyuda');
+        $this->_ayud= new PHPAyuda;
+        
     }
     
     public function index()
@@ -17,6 +23,29 @@ class indexController extends Cf_Controlador
         
         $this->_vista->titulo = 'CalimaFramework';
         $this->_vista->renderizar('index', 'inicio');
+        
+        //ejemplo de filtros para seguridad en formularios
+        $this->filtro('<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>');
+        $this->filtroEspeciales("<a href='test'>Test</a>");
+        
+    }
+    
+    public function pruebas()
+    {
+        $datas = $this->cargaMod('prueba');
+        $this->_vista->postear= $datas->llamarDatos();
+        
+        $this->_vista->titulo = 'CalimaFramework';
+        $this->_vista->renderizar('index', 'inicio');
+    }
+    
+    public function filtro($texto){
+        
+       echo $this->_ayud->filtrarTexto($texto);
+    }
+    
+    public function filtroEspeciales($texto){
+    echo $this->_ayud->filtrarCaracteresEspeciales($texto);
     }
     
     public function ecx1(){
