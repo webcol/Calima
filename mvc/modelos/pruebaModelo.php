@@ -14,7 +14,7 @@ class pruebaModelo extends Cf_Modelo {
     
     public function llamarDatos(){
         //echo DB_HOST;
-        $post=$this->_bd->query('select * from post');
+        $post=$this->_bd->consulta('select * from post ');
         return $post=$this->_bd->resultset();
         
        
