@@ -27,8 +27,31 @@
   </head>
 
   <body>
-  
-  	<pre><?php print_r($this->postear); ?></pre>
+      
+      <pre>
+          <?php if(isset($this->postear) && count($this->postear)): ?>
+
+          <table>
+              <?php for($i=0; $i<count($this->postear); $i++): ?>
+              
+              <tr>
+                  <td><?php echo $this->postear[$i]['id']; ?></td>
+                  <td><?php echo $this->postear[$i]['titulo']; ?></td>
+                  <td><?php echo $this->postear[$i]['cuerpo']; ?></td>
+              </tr>
+              
+              <?php endfor; ?>
+              
+</table>
+              
+              
+          <?php else: ?>
+
+          <p><strong>no hay post</strong></p>
+          <?php endif; ?>
+      </pre>
+          
+          
 
     <div class="container">
 
