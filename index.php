@@ -15,8 +15,6 @@ define('CSS_PATH', SITE_ROOT . 'public_'.DS.'css' . DS);
 define('IMG_PATH', SITE_ROOT . 'public_'.DS.'img' . DS);
 define('JS_PATH', SITE_ROOT . 'public_'.DS.'js' . DS);
 define('RUTA_LIBS', SITE_ROOT . 'sistema'.DS.'librerias' . DS);
-define('RUTA_AYUDANTES', SITE_ROOT . 'sistema'.DS.'ayudantes' . DS);
-define('RUTA_MOD', SITE_ROOT . 'mvc'.DS.'modelos' . DS);
 define('RUTA_ORM', SITE_ROOT . 'sistema'.DS.'librerias'.DS.'ORMbasico' . DS);
 
 
@@ -33,5 +31,3 @@ try{
 catch(Exception $e){
     echo $e->getMessage();
 }
-
-#
