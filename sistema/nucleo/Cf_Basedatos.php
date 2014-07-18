@@ -3,11 +3,12 @@
 
 class Cf_Basedatos{
     
-    private $host      = DB_HOST;
-    private $user      = DB_USER;
-    private $pass      = DB_PASS;
-    private $dbname    = DB_NAME;
-    private $dbchar    = DB_CHAR;
+    private $host      = BD_HOST;
+    private $usuario      = BD_USUARIO;
+    private $clave      = BD_CLAVE;
+    private $bdnombre    = BD_NOMBRE;
+    private $bdchar    = BD_CHAR;
+    private $bdconector    = BD_CONECTOR;
  
     private $stmt;
     private $dbh;
@@ -16,7 +17,7 @@ class Cf_Basedatos{
  
     public function __construct(){
         // definimos el dsn
-          $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+          $dns = $this->bdconector . ':host=' . $this->host . ';dbname=' . $this->bdnombre;
           
         // Opciones para PDO
                
@@ -29,7 +30,7 @@ class Cf_Basedatos{
         
         // creamos una instancia de PDO
         try{
-            $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
+            $this->dbh = new PDO($dns, $this->usuario, $this->clave, $options);
         }
         // Catch any errors
         catch(PDOException $e){
@@ -37,11 +38,11 @@ class Cf_Basedatos{
         }
     }
     
-    public function query($query){
+    public function consulta($query){
     $this->stmt = $this->dbh->prepare($query);
     }
     
-    public function bind($param, $value, $type = null){
+    public function enlace($param, $value, $type = null){//bind
     if (is_null($type)) {
         switch (true) {
             case is_int($value):
@@ -57,23 +58,31 @@ class Cf_Basedatos{
                 $type = PDO::PARAM_STR;
         }
     }
-    $this->stmt->bindValue($param, $value, $type);
+    $this->stmt->bindValue($param, $value, $type);//bindValue de PDO php
     }
     
-    public function execute(){
+    public function ejecucion(){
     return $this->stmt->execute();
     }
     
     public function resultset(){
-    $this->execute();
+    $this->ejecucion();
     return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     
-    public function single(){
-    $this->execute();
+    public function primeraColumna(){
+    $this->ejecucion();
+    return $this->stmt->fetchColumn();
+    }
+    
+    
+    
+    public function PrimerRegistro(){
+    $this->ejecucion();
     return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
-    public function rowCount(){
+    
+    public function contarFilas(){
     return $this->stmt->rowCount();
     }
     

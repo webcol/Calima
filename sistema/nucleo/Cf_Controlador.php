@@ -11,7 +11,7 @@ abstract class Cf_Controlador
         $this->_vista = new Cf_Vista(new Cf_Solicitud);
     }
     
-    protected function cargalib($libreria){
+    protected function cargaLib($libreria){
         $rutaLib = RUTA_LIBS . $libreria . '.php';
         if(is_readable($rutaLib)){
             require_once $rutaLib;
@@ -35,8 +35,20 @@ abstract class Cf_Controlador
             //echo $rutaMod;
             
             
-            throw new Exception("Error al cargar el modelo");
+            throw new Exception("Error al cargar modelo");
             
         }
     }
+    
+    protected function cargaAyudante($ayudante){
+       $rutaAyudante = RUTA_AYUDANTES . $ayudante . '.php';
+        if(is_readable($rutaAyudante)){
+            require_once $rutaAyudante;
+           //echo 'libreria cargada';
+        }
+        else {
+            throw new Exception("Error al cargar ayudante");
+        }
+    }
+    
 }

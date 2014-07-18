@@ -5,9 +5,9 @@ define('BASE_URL', '');
 define('DEFAULT_CONTROLLER', 'index');
 define('DEFAULT_LAYOUT', 'template');
 
-define('APP_NAME', 'CalimaFramework');
+define('APP_NOMBRE', 'CalimaFramework');
 define('APP_SLOGAN', 'Framework MVC php');
-define('APP_COMPANY', 'www.webcol.net');
+define('APP_EMPRESA', 'www.webcol.net');
 
 #webcol seguridad
 define('KEY_MD5', 'P0L1');
@@ -15,8 +15,9 @@ define('KEY_MD5', 'P0L1');
 
 #base de datos
 // Configuracion de tu base de datos
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'kalima');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_CHAR', 'utf8');
+define('BD_HOST', 'localhost');
+define('BD_NOMBRE', 'calima');
+define('BD_USUARIO', 'efrasoft');
+define('BD_CLAVE', '654321aa');
+define('BD_CHAR', 'utf8');
+define('BD_CONECTOR', 'mysql');
