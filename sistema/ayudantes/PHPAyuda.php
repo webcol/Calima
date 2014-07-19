@@ -17,4 +17,10 @@ class PHPAyuda {
     public function filtrarCaracteresEspeciales($texto){
         return htmlspecialchars($texto, ENT_QUOTES);
     }
+    
+    //email
+    
+    public function enviarCorreo($para, $titulo, $mensaje){
+        return mail($para, $titulo, $mensaje);
+    }
 }
