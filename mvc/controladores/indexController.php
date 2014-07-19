@@ -22,7 +22,7 @@ class indexController extends Cf_Controlador
         $this->_vista->postear= $datas->llamarDatos();
         
         $this->_vista->titulo = 'CalimaFramework';
-        $this->_vista->renderizar('index', 'inicio');
+        $this->_vista->imprimirVista('index', 'inicio');
         
         //ejemplo de filtros para seguridad en formularios
         $this->filtro('<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>');
@@ -36,7 +36,7 @@ class indexController extends Cf_Controlador
         $this->_vista->postear= $datas->llamarDatos();
         
         $this->_vista->titulo = 'CalimaFramework';
-        $this->_vista->renderizar('index', 'inicio');
+        $this->_vista->imprimirVista('index', 'inicio');
     }
     
     public function filtro($texto){
