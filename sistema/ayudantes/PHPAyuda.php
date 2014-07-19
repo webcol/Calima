@@ -20,7 +20,7 @@ class PHPAyuda {
     
     //email
     
-    public function enviarCorreo($para, $titulo, $mensaje){
+    public function enviarCorreo($para, $titulo= 'Asunto', $mensaje= 'cuerpo del correo'){
         return mail($para, $titulo, $mensaje);
     }
 }
