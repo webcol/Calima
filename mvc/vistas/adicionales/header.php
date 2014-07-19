@@ -15,5 +15,5 @@
     <link href="<?php echo $_layoutParams['ruta_css']; ?>justified-nav.css" rel="stylesheet">
     <!-- Page Specific CSS -->
     <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-    <link href="<?php echo $_layoutParams['ruta_css']; ?>style.css" rel="stylesheet" />
+    
   </head>
