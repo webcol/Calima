@@ -1,7 +1,7 @@
  <!-- Site footer -->
         <div id="footer">
  
-            <center> Copyleft &copy; 2013 <?php echo APP_COMPANY; ?></center>
+            <center> Copyleft &copy; 2013 <?php echo APP_EMPRESA; ?></center>
             
        </div>
       
