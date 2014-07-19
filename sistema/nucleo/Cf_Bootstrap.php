@@ -30,7 +30,7 @@ class Cf_Bootstrap
             }
             
         } else {
-            throw new Exception('Creemos que tienes un problema! controlador no encontado');
+            throw new Exception('houston tenemos un problema! controlador no encontado');
         }
     }
 }
