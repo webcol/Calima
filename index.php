@@ -6,7 +6,7 @@ defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)).DS);
 
 
 //define('DS', DIRECTORY_SEPARATOR);
-define('ROOT', realpath(dirname(__FILE__)) . DS);
+
 define('RUTA_NUCLEO', SITE_ROOT . 'sistema'.DS.'nucleo' . DS);
 # define para mvc erp
 define('VIEW_PATH', SITE_ROOT . 'mvc'.DS.'vistas' . DS);
