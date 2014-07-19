@@ -1,7 +1,0 @@
-se debe de crear clases para conexion con
-mysql
-mssql
-mysli
-oracle
-pgsql
-sqlite
