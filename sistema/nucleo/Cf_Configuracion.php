@@ -3,7 +3,7 @@
 #Configuracion Basica
 define('BASE_URL', '');
 define('DEFAULT_CONTROLLER', 'index');
-define('DEFAULT_LAYOUT', 'template');
+define('ADICIONALES_VISTA', 'adicionales');
 
 define('APP_NOMBRE', 'CalimaFramework');
 define('APP_SLOGAN', 'Framework MVC php');
