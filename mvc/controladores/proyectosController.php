@@ -15,6 +15,6 @@ class proyectosController extends Cf_Controlador
     public function index()
     {
         $this->_vista->titulo = 'CalimaFramework';
-        $this->_vista->renderizar('index', 'inicio');
+        $this->_vista->imprimirVista('index', 'inicio');
     }
 }
