@@ -17,9 +17,6 @@ Efrain Restrepo P
 @efrasoft @webcolgroup @whitehats
 www.webcol.net - ceo@webcol.net
 
-Alexander Ocampo Silva
-alexanderocamposilva@gmail.com
-
 
 Agradecimientos especiales.<br> 
 A Dios por darnos la posibilidad de aprender y hacer nuevos aportes a la informática.<br>
