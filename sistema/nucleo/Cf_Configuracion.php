@@ -48,6 +48,6 @@ define('CF_LOCALE_DATE_FORMAT', '%A, %d %B %G');
 define('CF_LOCALE_TIME_FORMAT', ' %T');
 
 /* Default location to store application data. Must be protected from public. */
-define('CF_PATH_DATA', dirname(__FILE__) . '/bb-data');
+define('CF_PATH_DATA', dirname(__FILE__) . '/Cf-data');
 
 ini_set('memory_limit', '256M');
