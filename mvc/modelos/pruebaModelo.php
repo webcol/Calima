@@ -1,11 +1,5 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 class pruebaModelo extends Cf_Modelo {
     
     public function __construct() {
@@ -15,7 +9,7 @@ class pruebaModelo extends Cf_Modelo {
     public function llamarDatos(){
         //echo DB_HOST;
         $post=$this->_bd->consulta('select * from post ');
-        return $post=$this->_bd->resultset();
+        return $post=$this->_bd->resultset();//=$this->_bd->resultset();$post->fetchall();
         
        
     }
