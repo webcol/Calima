@@ -21,7 +21,7 @@ define('CF_KEY_MD5', 'P0L1');
 // Configuracion de tu base de datos
 define('CF_BD_HOST', 'localhost');
 define('CF_BD_NOMBRE', 'calima');
-define('CF_BD_USUARIO', 'juank');
+define('CF_BD_USUARIO', 'cali');
 define('CF_BD_CLAVE', '654321aa');
 define('CF_BD_CHAR', 'utf8');
 define('CF_BD_CONECTOR', 'mysql');
