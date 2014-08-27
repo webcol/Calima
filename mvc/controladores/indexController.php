@@ -18,6 +18,7 @@ class indexController extends Cf_Controlador
     
     public function index()
     {
+        
         $datas = $this->cargaMod('prueba');
         $this->_vista->postear= $datas->llamarDatos();
         
