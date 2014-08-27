@@ -3,12 +3,12 @@
 
 class Cf_Basedatos{
     
-    private $host      = BD_HOST;
-    private $usuario      = BD_USUARIO;
-    private $clave      = BD_CLAVE;
-    private $bdnombre    = BD_NOMBRE;
-    private $bdchar    = BD_CHAR;
-    private $bdconector    = BD_CONECTOR;
+    private $host      = CF_BD_HOST;
+    private $usuario      = CF_BD_USUARIO;
+    private $clave      = CF_BD_CLAVE;
+    private $bdnombre    = CF_BD_NOMBRE;
+    private $bdchar    = CF_BD_CHAR;
+    private $bdconector    = CF_BD_CONECTOR;
  
     private $stmt;
     private $dbh;
@@ -104,6 +104,4 @@ class Cf_Basedatos{
     public function debugDumpParams(){
     return $this->stmt->debugDumpParams();
     }
-    
-    
 }
