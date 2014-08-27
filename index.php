@@ -1,5 +1,7 @@
 <?php
 
+//SANDRA
+
 define('DS', DIRECTORY_SEPARATOR);
 defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)).DS);
 
