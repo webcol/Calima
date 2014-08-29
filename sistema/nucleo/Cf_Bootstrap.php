@@ -1,10 +1,10 @@
 <?php
 
-class Cf_Bootstrap
-{
-    public static function actuar(Cf_Solicitud $peticion)
-    {
-        $controlador = $peticion->getControlador() . 'Controller';
+class Cf_Bootstrap {
+    
+    
+    public static function actuar(Cf_Solicitud $peticion){
+        $controlador = $peticion->getControlador() . 'Controlador';
         //definimos la ruta al controlador
         $rutaControlador = SITE_ROOT . 'mvc' . DS .'controladores' . DS . $controlador . '.php';
         $metodo = $peticion->getMetodo();
