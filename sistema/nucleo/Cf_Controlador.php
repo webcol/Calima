@@ -18,11 +18,11 @@ abstract class Cf_Controlador
            //echo 'libreria cargada';
         }
         else {
-            throw new Exception("Error al cargar libreria");
+            throw new Exception("houston tenemos un problema! al cargar libreria");
         }
     }
     
-    protected function cargaMod($modelo){
+    protected function cargaModelo($modelo){
         $modelo=$modelo.'Modelo';
        $rutaMod = RUTA_MOD . $modelo . '.php';
         if(is_readable($rutaMod)){
@@ -35,7 +35,7 @@ abstract class Cf_Controlador
             //echo $rutaMod;
             
             
-            throw new Exception("Error al cargar modelo");
+            throw new Exception("houston tenemos un problema! al cargar modelo");
             
         }
     }
@@ -47,7 +47,7 @@ abstract class Cf_Controlador
            //echo 'libreria cargada';
         }
         else {
-            throw new Exception("Error al cargar ayudante");
+            throw new Exception("houston tenemos un problema! al cargar ayudante");
         }
     }
     
