@@ -22,5 +22,15 @@ class pruebaModelo extends Cf_Modelo {
         $post=$this->_bd->enlace(':cuerpo', 'este es el cuerpo 23');
         $post=$this->_bd->ejecucion();
         //return $post=$this->_bd->resultset();
+        //echo $post=$this->_bd->lastInsertId();
+    }
+    
+    public function actualizarDatos(){
+        $post=$this->_bd->consulta('UPDATE post set titulo = :titulo');
+       
+        $post=$this->_bd->enlace(':titulo', 'efrasoft5');
+        
+        $post=$this->_bd->ejecucion();
+        
     }
 }
