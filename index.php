@@ -2,12 +2,13 @@
 
 //SANDRA
 
-define('DS', DIRECTORY_SEPARATOR);
+
+defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)).DS);
+defined('SITE_PATH') ? NULL : define ('SITE_PATH', realpath(dirname(__FILE__) . DS . '..' . DS) . DS);
 
 
 
-//define('DS', DIRECTORY_SEPARATOR);
 
 define('RUTA_NUCLEO', SITE_ROOT . 'sistema'.DS.'nucleo' . DS);
 # define para mvc erp
