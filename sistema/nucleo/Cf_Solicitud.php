@@ -18,7 +18,7 @@ class Cf_Solicitud
         }       
         
         if(!$this->_controlador){
-            $this->_controlador = DEFAULT_CONTROLLER;
+            $this->_controlador = CONTROLADOR_INICIAL;
         }
         
         if(!$this->_metodo){
