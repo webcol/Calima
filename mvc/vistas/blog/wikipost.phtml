@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<title>Aries Sun Sign March 21 - April 19</title>
+
+		<!-- Bootstrap CSS file -->
+	<link href="<?PHP ECHO BASE_URL ?>/public_/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="<?PHP ECHO BASE_URL ?>/public_/css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="<?PHP ECHO BASE_URL ?>/public_/css/blog.css" rel="stylesheet" />
+	</head>
+
+	<body>
+                <?php if(isset($this->postear) && count($this->postear)): ?>
+		<!-- Header -->
+		<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">CfWiki</a>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+					<form class="navbar-form navbar-right" role="search">
+				      <div class="form-group">
+				        <input type="text" class="form-control" placeholder="Search">
+				      </div>
+				      <button type="submit" class="btn btn-default">Submit</button>
+				    </form>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Body -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+                                    <h1>Kalima Wiki</h1>
+                                    <table>
+              <tr>
+               <?php for($i=0; $i<count($this->postear); $i++): ?>
+					<article>
+                                            <?php if($this->postear[$i]['id']==$_GET['id']){ ?>
+						<h1><?php echo $this->postear[$i]['titulo']; ?></h1>
+                                                    
+				        <div class="row">
+				          	<div class="col-sm-6 col-md-6">
+				          		<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<a href="#">Signs</a>
+				          		&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> <a href="#">Aries</a>, <a href="#">Fire</a>, <a href="#">Mars</a>
+				          	</div>
+				          	<div class="col-sm-6 col-md-6">
+				          		<span class="glyphicon glyphicon-pencil"></span> <a href="#">0 Comentarios</a>			          		
+				          		&nbsp;&nbsp;<span class="glyphicon glyphicon-time"></span> <?php echo $this->postear[$i]['fecha']; ?>			          		
+				          	</div>
+				          </div>
+
+				          <hr>
+
+				          <img src="<?PHP ECHO BASE_URL ?>/public_/img/<?php echo $this->postear[$i]['imagen']; ?>" class="img-responsive">
+
+				          <br />
+
+				          <p class="lead"><?php echo $this->postear[$i]['descripcion']; ?>.</p>
+
+				          <p><?php echo $this->postear[$i]['post']; ?>.</p>
+
+						
+
+				          <hr>
+					</article>
+                                        <?php } ?>
+              <?php endfor; ?>
+              
+              </tr>
+        
+              
+        </table>
+
+					<ul class="pager">
+						<li class="previous"><a href="<script onclick='windows.Back'></script>">&larr; Regresar </a></li>
+					</ul>	
+
+					<!-- Comment form -->
+					<div class="well">
+						<h4>Apoyanos! deja tu comentario</h4>
+                                                <form action="<?PHP ECHO  BASE_URL; ?>blog/wikipost?id=<?php echo $_GET['id']?>" method="post" role="form" class="clearfix">
+						  <div class="col-md-6 form-group">
+						    <label class="sr-only" for="nombre">Nombre</label>
+                                                    <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">
+						  </div>
+						  <div class="col-md-6 form-group">
+						    <label class="sr-only" for="email">Email</label>
+                                                    <input name="email" type="email" class="form-control" id="email" placeholder="Email">
+						  </div>
+						  <div class="col-md-12 form-group">
+						    <label class="sr-only" for="comentario">Comentario</label>
+                                                    <textarea name="comentario" class="form-control" id="comentario" placeholder="Comentario"></textarea>
+						  </div>
+						  <div class="col-md-12 form-group text-right">
+                                                      <input type="checkbox" name="option1" value="1"> Aprobar<br>
+                                                      <input name="id" type='hidden' class="form-control" id="nombre" value="<?php echo $_GET['id']?>">
+                                                      <button name="enviar" type="submit" class="btn btn-primary">Enviar</button>
+						  </div>
+						</form>					
+					</div>
+
+					<hr />
+                                        <?php if(isset($this->comentarios) && count($this->comentarios)): ?>
+                                            <?php for($i=0; $i<count($this->comentarios); $i++): ?>
+					
+                                            <?php if($this->comentarios[$i]['id_blog']==$_GET['id']){ ?>
+						
+                                                
+                                                <ul id="comments" class="comments">
+						<li class="comment">
+							<div class="clearfix">
+								<h4 class="pull-left"><?php echo $this->comentarios[$i]['nombre']; ?></h4>
+								<p class="pull-right"><?php echo $this->comentarios[$i]['fecha']; ?></p>
+							</div>
+							<p>
+								<p><?php echo $this->comentarios[$i]['comentario']; ?></p>
+							</p>
+						</li>
+
+						
+					</ul>
+                                                
+                                                 <?php } ?>
+                                            <?php endfor; ?>
+                                                
+                                                <?php else: ?>
+
+                                            <p><strong>Aun no aportan a la comunidad</strong></p>
+                                        <?php endif; ?>
+					
+				</div>
+				<div class="col-md-4">
+
+					<div class="well text-center">
+						<p class="lead">
+							Si lo deseas puedes suscribirte para nuestras Noticias continuas!
+						</p>
+						<button class="btn btn-primary btn-lg">Suscribete hoy</button>
+					</div>
+
+					<!-- Latest Posts -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>Ùltimos post</h4>
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item"><a href="singlepost.html">1. Aries Sun Sign March 21 - April 19</a></li>
+							<li class="list-group-item"><a href="singlepost.html">2. Taurus Sun Sign April 20 - May 20</a></li>
+							<li class="list-group-item"><a href="singlepost.html">3. Gemini Sun Sign May 21 - June 21</a></li>
+							<li class="list-group-item"><a href="singlepost.html">4. Cancer Sun Sign June 22 - July 22</a></li>
+							<li class="list-group-item"><a href="singlepost.html">5. Leo Sun Sign July 23 - August 22 </a></li>
+						</ul>
+					</div>
+
+					<!-- Categories -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>Categorias</h4>
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item"><a href="#">Signs</a></li>
+							<li class="list-group-item"><a href="#">Elements</a></li>
+							<li class="list-group-item"><a href="#">Planets</a></li>
+							<li class="list-group-item"><a href="#">Cusps</a></li>
+							<li class="list-group-item"><a href="#">Compatibility</a></li>
+						</ul>
+					</div>
+
+					<!-- Tags -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>Tags</h4>
+						</div>
+						<div class="panel-body">
+							<ul class="list-inline">
+								<li><a href="#">Aries</a></li>
+								<li><a href="#">Fire</a></li>
+								<li><a href="#">Mars</a></li>
+								<li><a href="#">Taurus</a></li>
+								<li><a href="#">Earth</a></li>
+								<li><a href="#">Moon</a></li>
+								<li><a href="#">Gemini</a></li>
+								<li><a href="#">Air</a></li>
+								<li><a href="#">Mercury</a></li>
+								<li><a href="#">Cancer</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Recent Comments -->
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>Mas Visitados</h4>
+						</div>
+						<ul class="list-group">
+							<li class="list-group-item"><a href="#">I don't believe in astrology but still your writing style is really great! - <em>john</em></a></li>
+							<li class="list-group-item"><a href="#">Wow.. what you said is really true! I'm an aries though - <em>Anto</em></a></li>
+							<li class="list-group-item"><a href="#">Does capricorn and aries is compatibile? - <em>Sarah</em></a></li>
+							<li class="list-group-item"><a href="#">I'm a cancer woman been in love with Leo. Will this work? - <em>Mary</em></a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<hr />
+				
+			</div>
+		</footer>
+
+		<!-- Bootstrap Script file -->
+		<script src="lib/jquery-2.0.3.min.js"></script>
+		<script src="lib/bootstrap-3.0.3/js/bootstrap.min.js"></script>
+	
+        <?php else: ?>
+
+          <p><strong>no hay post</strong></p>
+          <?php endif; ?>
+        
+        </body>
+	</html>
