@@ -3,31 +3,31 @@
 class indexControlador extends Cf_Controlador
 {
     private $_exc;
-    private $_ayud;
+    private $_ayuda;
     
     public function __construct() {
         parent::__construct();
         $this->cargaLib('PHPExcel');
-        $this->_ayud = new PHPExcel;
+        $this->_ayuda = new PHPExcel;
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
         $this->cargaAyudante('PHPAyuda');
-        $this->_ayud= new PHPAyuda;
+        $this->_ayuda= new PHPAyuda;
         
     }
     
     public function index()
     {
         
-        $datas = $this->cargaModelo('prueba');
+       $datas = $this->cargaModelo('prueba');
         $this->_vista->postear= $datas->llamarDatos();
         
         $this->_vista->titulo = 'CalimaFramework';
         $this->_vista->imprimirVista('index', 'inicio');
         
         //ejemplo de filtros para seguridad en formularios
-        $this->filtro('<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>');
-        $this->filtroEspeciales("<a href='test'>Test</a>");
+        /*$this->filtro('<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>');
+        $this->filtroEspeciales("<a href='test'>Test</a>");*/
         
     }
     
@@ -38,6 +38,7 @@ class indexControlador extends Cf_Controlador
     public function pruebas()
     {
         $datas = $this->cargaMod('prueba');
+        $datas->
         $this->_vista->postear= $datas->llamarDatos();
         
         $this->_vista->titulo = 'CalimaFramework';
@@ -46,11 +47,11 @@ class indexControlador extends Cf_Controlador
     
     public function filtro($texto){
         
-       echo $this->_ayud->filtrarTexto($texto);
+       echo $this->_ayuda->filtrarTexto($texto);
     }
     
     public function filtroEspeciales($texto){
-    echo $this->_ayud->filtrarCaracteresEspeciales($texto);
+    echo $this->_ayuda->filtrarCaracteresEspeciales($texto);
     }
     
     public function ecx1(){
