@@ -8,14 +8,14 @@
 
 class blogControlador extends Cf_Controlador {
     
-    private $_ayud;
+    private $_ayuda;
 
 
     public function __construct() {
         parent::__construct();
         
         $this->cargaAyudante("PHPAyuda");
-        $this->_ayud = new PHPAyuda;
+        $this->_ayuda = new PHPAyuda;
     }
     
     public function index(){
@@ -55,12 +55,12 @@ class blogControlador extends Cf_Controlador {
             if (isset($_POST['enviar'])&& isset($_POST['option1'])  ) {
                 
                 $datas->insertarDatos(
-                     $this->_ayud->filtrarEntero($_POST['id']),
-                     $this->_ayud->filtrarTexto($_POST['nombre']),
-                     $this->_ayud->filtrarTexto($_POST['email']),
-                     $this->_ayud->filtrarTexto($_POST['comentario'])
+                     $this->_ayuda->filtrarEntero($_POST['id']),
+                     $this->_ayuda->filtrarTexto($_POST['nombre']),
+                     $this->_ayuda->filtrarTexto($_POST['email']),
+                     $this->_ayuda->filtrarTexto($_POST['comentario'])
                     );
-                echo $this->_ayud->filtrarEntero('id');
+                echo $this->_ayuda->filtrarEntero('id');
                 $_POST['option1']=false;
                 
             }

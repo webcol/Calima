@@ -7,8 +7,9 @@ class indexControlador extends Cf_Controlador
     
     public function __construct() {
         parent::__construct();
+        //Aqui cargamos libreria externa 
         $this->cargaLib('PHPExcel');
-        $this->_ayuda = new PHPExcel;
+        $this->_exc = new PHPExcel;
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
         $this->cargaAyudante('PHPAyuda');
@@ -17,16 +18,9 @@ class indexControlador extends Cf_Controlador
     }
     
     public function index()
-    {
-        
-       //$datas = $this->cargaModelo('prueba');
-       // $this->_vista->postear= $datas->llamarDatos();
-        
+    { 
         $this->_vista->titulo = 'CalimaFramework';
         $this->_vista->imprimirVista('index', 'inicio');
-        
-        
-        
     }
     
     public function datox(){
