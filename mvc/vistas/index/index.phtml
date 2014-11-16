@@ -11,7 +11,7 @@
     <title>Justified Nav Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?PHP ECHO BASE_URL ?>public_/css/bootstrap.css" rel="stylesheet">
+    <link href="<?PHP ECHO BASE_URL ?>/public_/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../layout/default/css/justified-nav.css" rel="stylesheet">
@@ -28,28 +28,6 @@
 
   <body>
       
-      <pre>
-          <?php if(isset($this->postear) && count($this->postear)): ?>
-
-          <table>
-              <?php for($i=0; $i<count($this->postear); $i++): ?>
-              
-              <tr>
-                  <td><?php echo $this->postear[$i]['id']; ?></td>
-                  <td><?php echo $this->postear[$i]['titulo']; ?></td>
-                  <td><?php echo $this->postear[$i]['cuerpo']; ?></td>
-              </tr>
-              
-              <?php endfor; ?>
-              
-</table>
-              
-              
-          <?php else: ?>
-
-          <p><strong>no hay post</strong></p>
-          <?php endif; ?>
-      </pre>
           
           
 
@@ -60,7 +38,7 @@
         <ul class="nav nav-justified">
           <li class="active"><a href="index">Inicio</a></li>
           <li><a href="proyectos">Proyectos</a></li>
-          <li><a href="aprende">Aprende</a></li>
+          <li><a href="blog/">Aprende</a></li>
           <li><a href="antes">Antes de iniciar</a></li>
 		  <li><a href="aporta">Aporta</a></li>
           <li><a href="acerca">Acerca de</a></li>
@@ -71,7 +49,7 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>Calima Framework</h1>
-        <p class="lead">La forma eficaz, efectiva, segura y con la curva de aprendisaje mas rapida en la implementacion de frameworks php en español.<br>Basado en la arquitectura MVC y con las mejores metodologias heredadas de los frameworks mas importantes.</p><p>Implemente aplicaciones web en minutos con nuestro motor MVC y la ayuda de Bootstrap 3.2.</p>
+        <p class="lead">La forma eficaz, efectiva, segura y con la curva de aprendizaje mas rápida en la implementación de frameworks php en español.<br>Basado en la arquitectura MVC y con las mejores metodologías heredadas de los frameworks mas importantes.</p><p>Implemente aplicaciones web en minutos con nuestro motor MVC y la ayuda de Bootstrap 3.2.</p>
         <p><a class="btn btn-lg btn-success" href="https://github.com/webcol/Calima" role="button">Descargalo hoy de githup</a></p>
       </div>
 
@@ -80,17 +58,17 @@
         <div class="col-lg-4">
           <h2>Rapido!</h2>
           
-          <p>Descargalo lee el install y ya estaras listo para usar una herramienta que te permitira desarrollar aplicaciones y sitios web con una curva de aprendisaje muy corta. </p>
+          <p>Descarga lo lee el install y ya estarás listo para usar una herramienta que te permitirá desarrollar aplicaciones y sitios web con una curva de aprendizaje muy corta. </p>
           <p><a class="btn btn-primary" href="#" role="button">Ver detalles &raquo;</a></p>
         </div>
         <div class="col-lg-4">
           <h2>Seguro!</h2>
-          <p>Teniendo en cuenta la gran cantidad de mecanismos para el sabotaje, fuga de informacion y violacion de tus sitios web, Cf cuenta con plugins que garantizan el buen funcionamiento del tu sistema web. </p>
+          <p>Teniendo en cuenta la gran cantidad de mecanismos para el sabotaje, fuga de información y violación de tus sitios web, Cf cuenta con plugins que garantizan el buen funcionamiento del tu sistema web. </p>
           <p><a class="btn btn-primary" href="#" role="button">Ver detalles &raquo;</a></p>
        </div>
         <div class="col-lg-4">
           <h2>En tu Idioma</h2>
-          <p>Una de las grandes problematicas en la adopcion de un frameworks es la gran cantidad de informacion que se debe aprender para su posterior implementacion y desarrollo de algunas aplicaciones.</p>
+          <p>Una de las grandes problemáticas en la adopción de un frameworks es la gran cantidad de información que se debe aprender para su posterior implementación y desarrollo de algunas aplicaciones.</p>
           <p><a class="btn btn-primary" href="#" role="button">Ver detalles &raquo;</a></p>
         </div>
       </div>
