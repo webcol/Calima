@@ -19,15 +19,13 @@ class indexControlador extends Cf_Controlador
     public function index()
     {
         
-       $datas = $this->cargaModelo('prueba');
-        $this->_vista->postear= $datas->llamarDatos();
+       //$datas = $this->cargaModelo('prueba');
+       // $this->_vista->postear= $datas->llamarDatos();
         
         $this->_vista->titulo = 'CalimaFramework';
         $this->_vista->imprimirVista('index', 'inicio');
         
-        //ejemplo de filtros para seguridad en formularios
-        /*$this->filtro('<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>');
-        $this->filtroEspeciales("<a href='test'>Test</a>");*/
+        
         
     }
     
