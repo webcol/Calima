@@ -104,4 +104,9 @@ class Cf_Basedatos{
     public function debugDumpParams(){
     return $this->stmt->debugDumpParams();
     }
+    
+    public function single(){
+    $this->ejecucion();
+    return $this->stmt->fetch(PDO::FETCH_ASSOC);
+}
 }
