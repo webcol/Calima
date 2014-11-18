@@ -31,6 +31,18 @@ class blogModelo extends Cf_Modelo {
        
     }
     
+    public function llamarDatosBlogId($id){
+        //echo DB_HOST;
+        $idvideo=$id;
+        $datosQuery="select idvideo from blog where id = :idvideo";
+        $gsent=$this->_bd->consulta('SELECT idvideo FROM blog WHERE id = :idvideo');
+        $gsent=$this->_bd->enlace(':idvideo', $idvideo);
+        //$gsent=$this->_bd->ejecucion();
+        $row = $gsent=$this->_bd->single();
+        return  $row;
+       
+    }
+    
     public function llamarComentarios(){
         //echo DB_HOST;
         $post=$this->_bd->consulta('select * from comentarios ');
