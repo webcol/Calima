@@ -41,6 +41,7 @@ class blogControlador extends Cf_Controlador {
         $this->_vista->postear= $datas->llamarDatosBlog();
         $this->_vista->comentarios= $datas->llamarComentarios();
         $this->_vista->contar= $datas->contarComentarios($_GET['id']);
+        $this->_vista->video= $datas->llamarDatosBlogId($_GET['id']);
         $this->_vista->titulo = 'Blog 1 Calima Framework';
         $this->_vista->imprimirVista('wikipost', 'blog');  
         
