@@ -88,6 +88,9 @@
         
               
         </table>
+                                   <?php if(isset($this->video)){ ?> 
+                                    <div class="well">  <iframe type="text/html" width="500" height="385" src="http://www.youtube.com/embed/<?php echo $this->video['idvideo']; ?>" frameborder="0"></iframe> </div>
+                                    <?php } ?>
 
 					<ul class="pager">
 						<li class="previous"><a href="<script onclick='windows.Back'></script>">&larr; Regresar </a></li>
