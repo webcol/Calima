@@ -32,7 +32,7 @@ class Cf_Basedatos{
         try{
             $this->dbh = new PDO($dns, $this->usuario, $this->clave, $options);
         }
-        // Catch any errors
+        // Catch algunos errores
         catch(PDOException $e){
             $this->error = $e->getMessage();
         }
