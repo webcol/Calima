@@ -14,12 +14,12 @@ class Cf_Sesion
 {
     
     
-private $host      = BD_HOST;
-private $usuario      = BD_USUARIO;
-private $clave      = BD_CLAVE;
-private $bdnombre    = BD_NOMBRE;
-private $bdchar    = BD_CHAR;
-private $bdconector    = BD_CONECTOR;
+private $host      = CF_BD_HOST;
+private $usuario      = CF_BD_USUARIO;
+private $clave      = CF_BD_CLAVE;
+private $bdnombre    = CF_BD_NOMBRE;
+private $bdchar    = CF_BD_CHAR;
+private $bdconector    = CF_BD_CONECTOR;
 
 private $stmt;
 private $dbh;
@@ -64,7 +64,8 @@ session_set_cookie_params($cookieParams["lifetime"], $cookieParams["path"], $coo
 // Change the session name 
 session_name($session_name);
 // Now we cat start the session
-session_start();
+@session_start();
+ob_start();
 // This line regenerates the session and delete the old one. 
 // It also generates a new encryption key in the database. 
 session_regenerate_id(true); 
@@ -110,7 +111,7 @@ function escribir($id, $data) {
  
    $time = time();
    if(!isset($this->w_stmt)) {
-      $this->w_stmt = $this->dbh->prepare("REPLACE INTO sesion (id, set_time, data, session_key) VALUES (?, ?, ?, ?)");
+      $this->w_stmt = $this->dbh->prepare("REPLACE INTO sesiones (id, set_time, data, session_key) VALUES (?, ?, ?, ?)");
    }
  
    $this->w_stmt->bind_param('siss', $id, $time, $data, $key);
@@ -120,7 +121,7 @@ function escribir($id, $data) {
 
 function destruir($id) {
    if(!isset($this->delete_stmt)) {
-      $this->delete_stmt = $this->dbh->prepare("DELETE FROM sesion WHERE id = ?");
+      $this->delete_stmt = $this->dbh->prepare("DELETE FROM sesiones WHERE id = ?");
    }
    $this->delete_stmt->bind_param('s', $id);
    $this->delete_stmt->execute();
