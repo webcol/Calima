@@ -1,5 +1,15 @@
 <?php
 
+/*
+ * require('Cf_Sesion.php');
+ * $sesion=new Cf_Sesion();
+ * Set to true if using https
+ * $sesion->iniciarSesion('_s',false);
+ 
+ * $_SESSION['something']='A value.';
+ * echo$_SESSION['something'];
+ */
+
 class Cf_Sesion
 {
     
@@ -30,15 +40,15 @@ register_shutdown_function('session_write_close');
 
 function iniciarSesion($session_name, $secure) {
 // Make sure the session cookie is not accessable via javascript.
-$httponly = true;
+$httpunico = true;
 
 // Hash algorithm to use for the sessionid. (use hash_algos() to get a list of available hashes.)
-$session_hash = 'sha512';
+$sesion_hash = 'sha512';
 
 // Check if hash is available
-if (in_array($session_hash, hash_algos())) {
+if (in_array($sesion_hash, hash_algos())) {
   // Set the has function.
-  ini_set('session.hash_function', $session_hash);
+  ini_set('session.hash_function', $sesion_hash);
 }
 // How many bits per character of the hash.
 // The possible values are '4' (0-9, a-f), '5' (0-9, a-v), and '6' (0-9, a-z, A-Z, "-", ",").
@@ -50,7 +60,7 @@ ini_set('session.use_only_cookies', 1);
 // Get session cookie parameters 
 $cookieParams = session_get_cookie_params(); 
 // Set the parameters
-session_set_cookie_params($cookieParams["lifetime"], $cookieParams["path"], $cookieParams["domain"], $secure, $httponly); 
+session_set_cookie_params($cookieParams["lifetime"], $cookieParams["path"], $cookieParams["domain"], $secure, $httpunico); 
 // Change the session name 
 session_name($session_name);
 // Now we cat start the session
@@ -76,7 +86,7 @@ function cerrar() {
 
 function leer($id) {
    if(!isset($this->read_stmt)) {
-      $this->read_stmt = $this->dbh->prepare("SELECT data FROM sesion WHERE id = ? LIMIT 1");
+      $this->read_stmt = $this->dbh->prepare("SELECT data FROM sesiones WHERE id = ? LIMIT 1");
    }
    $this->read_stmt->bind_param('s', $id);
    $this->read_stmt->execute();
@@ -119,7 +129,7 @@ function destruir($id) {
 
 function gc($max) {
    if(!isset($this->gc_stmt)) {
-      $this->gc_stmt = $this->dbh->prepare("DELETE FROM sesion WHERE set_time < ?");
+      $this->gc_stmt = $this->dbh->prepare("DELETE FROM sesiones WHERE set_time < ?");
    }
    $old = time() - $max;
    $this->gc_stmt->bind_param('s', $old);
@@ -129,7 +139,7 @@ function gc($max) {
 
 private function getkey($id) {
    if(!isset($this->key_stmt)) {
-      $this->key_stmt = $this->dbh->prepare("SELECT session_key FROM sesion WHERE id = ? LIMIT 1");
+      $this->key_stmt = $this->dbh->prepare("SELECT session_key FROM sesiones WHERE id = ? LIMIT 1");
    }
    $this->key_stmt->bind_param('s', $id);
    $this->key_stmt->execute();
