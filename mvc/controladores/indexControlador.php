@@ -4,6 +4,8 @@ class indexControlador extends Cf_Controlador
 {
     private $_exc;
     private $_ayuda;
+    private $_seg;
+    private $_sesion;
     
     public function __construct() {
         parent::__construct();
@@ -14,6 +16,9 @@ class indexControlador extends Cf_Controlador
         // cargamos la clase ayudantes para usar sus metodos de ayuda
         $this->cargaAyudante('PHPAyuda');
         $this->_ayuda= new PHPAyuda;
+        $this->cargaAyudante('PHPAyuda');
+        $this->_seg= new PHPSeguridad;
+        $this->_sesion=new Cf_Sesion();
         
     }
     
@@ -21,6 +26,7 @@ class indexControlador extends Cf_Controlador
     { 
         $this->_vista->titulo = 'CalimaFramework';
         $this->_vista->imprimirVista('index', 'inicio');
+        $this->_sesion->iniciarSesion('_s', false);
     }
     
     public function datox(){
@@ -39,11 +45,11 @@ class indexControlador extends Cf_Controlador
     
     public function filtro($texto){
         
-       echo $this->_ayuda->filtrarTexto($texto);
+       echo $this->_seg->filtrarTexto($texto);
     }
     
     public function filtroEspeciales($texto){
-    echo $this->_ayuda->filtrarCaracteresEspeciales($texto);
+    echo $this->_seg->filtrarCaracteresEspeciales($texto);
     }
     
     public function ecx1(){
