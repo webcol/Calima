@@ -17,6 +17,7 @@ class indexControlador extends Cf_Controlador
         $this->cargaAyudante('PHPAyuda');
         $this->_ayuda= new PHPAyuda;
         $this->cargaAyudante('PHPAyuda');
+		$this->cargaAyudante('Cf_PHPSeguridad');
         $this->_seg= new PHPSeguridad;
         $this->_sesion=new Cf_Sesion();
         
