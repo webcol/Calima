@@ -7,14 +7,14 @@ Basado en Diferentes Frameworks PHP
 
 Desarrollado para usar el patron MVC
 
-Corriendo sitios web y app con twitter bootstrap 3.1.1
+Corriendo sitios web y app con twitter bootstrap 3.3
 
 Trabajo para presentar tesis de grado en Ingeniería Informática
 
 Uniciencia - Cali<br><br>
 
 Efrain Restrepo P<br>
-@efrasoft @webcolgroup @whitehats<br>
+@calimaframework<br> @efrasoft<br> @webcolgroup<br> @whitehats<br>
 www.webcol.net - ceo@webcol.net<br>
 
 
