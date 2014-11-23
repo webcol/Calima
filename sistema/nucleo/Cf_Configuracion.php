@@ -15,6 +15,8 @@ define('CF_DEBUG', TRUE);
 /* Default application locale */
 define('CF_LOCALE', 'es_ES');
 
+define('CF_ANALYTICS', 'UA-56990391-1');
+
 /* Translatable locale format */
 define('CF_LOCALE_DATE_FORMAT', '%A, %d %B %G');
 
