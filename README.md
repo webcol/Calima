@@ -1,4 +1,4 @@
-Calima Framework Vs 1.0
+Calima Framework  Beta Vs 1.0
 ======
 
 Framework PHP en español
