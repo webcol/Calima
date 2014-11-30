@@ -81,11 +81,11 @@
 
 			          <br />
 
-			          <p class="lead"><?php echo $this->postear[$i]['descripcion']; ?>.</p>
+                                  <p class="lead"><?php echo $this->postear[$i]['descripcion']; ?>.</p>
                                   
                                   
 
-			          <p><?php echo $this->postear[$i]['post']; ?>.</p>
+			          <p><?php echo substr($this->postear[$i]['post'], 0 ,150); ?>..</p>
 
 					  <p class="text-right">
 				          <a href="wikipost?id=<?php echo $this->postear[$i]['id']; ?>">
