@@ -29,7 +29,7 @@ class blogControlador extends Cf_Controlador {
     public function crearpost(){
         $datas = $this->cargaModelo('blog');       
         
-        $this->_vista->postear= $datas->llamarDatosBlog();
+        $this->_ayuda->$this->_vista->postear= $datas->llamarDatosBlog();
         $this->_vista->titulo = 'Blog Calima Framework crear post';
         $this->_vista->imprimirVista('crearpost', 'blog');  
         
