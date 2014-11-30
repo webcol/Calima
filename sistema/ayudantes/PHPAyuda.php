@@ -30,6 +30,14 @@ class PHPAyuda {
         
     }
     
+    //cadenas
+    
+    function rangoTexto($texto, $inicio, $cantidad){
+        
+        return $limite= substr($texto, $inicio, $cantidad); 
+        
+    }
+    
     //Redirecionar
     
     function Redireccion($url, $permanent = false){
