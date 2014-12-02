@@ -13,6 +13,12 @@
 	<link href="<?PHP ECHO BASE_URL ?>/public_/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="<?PHP ECHO BASE_URL ?>/public_/css/bootstrap-theme.min.css" rel="stylesheet" />
 	<link href="<?PHP ECHO BASE_URL ?>/public_/css/blog.css" rel="stylesheet" />
+	
+	
+	
+	
+	
+	
 
 </head>
 
@@ -35,14 +41,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="index.html" class="navbar-brand">CfWiki</a>
+				<a href="index.html" class="navbar-brand">CfBlog</a>
 			</div>
 			<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 				
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="about.html">About</a></li>
+					<li class="active"><a href="index">Inicio</a></li>
+					<li><a href="index">Servicios</a></li>
+					<li><a href="apoyanos">Apoyanos</a></li>
+					<li><a href="contactos">Contactos</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -53,7 +60,7 @@
 		<div class="row">
 			<div class="col-md-8">
 
-				<h1>Kalima Wiki</h1>
+				<h1>Calima Blog</h1>
                                 
                                 
               
@@ -66,7 +73,7 @@
 
 			        <div class="row">
 			          	<div class="col-sm-6 col-md-6">
-			          		<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<a href="#">Signs</a>
+			          		<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<a href="#">Autor: &nbsp;<?php echo $this->postear[$i]['autor']; ?> </a>
 			          		&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> <a href="#">Aries</a>, <a href="#">Fire</a>, <a href="#">Mars</a>
 			          	</div>
 			          	<div class="col-sm-6 col-md-6">
@@ -77,18 +84,18 @@
 
 			          <hr>
 
-			          <img src="<?PHP ECHO BASE_URL ?>/public_/img/<?php echo $this->postear[$i]['imagen']; ?>" class="img-responsive">
+			          <img src="<?PHP ECHO BASE_URL ?>/public_/images/img/<?php echo $this->postear[$i]['imagen']; ?>" class="img-responsive">
 
 			          <br />
 
-                                  <p class="lead"><?php echo $this->postear[$i]['descripcion']; ?>.</p>
+			          <p class="lead"><?php echo $this->postear[$i]['descripcion']; ?>.</p>
                                   
                                   
 
-			          <p><?php echo substr($this->postear[$i]['post'], 0 ,150); ?>..</p>
+			          <p><?php echo $this->postear[$i]['post']; ?>.</p>
 
 					  <p class="text-right">
-				          <a href="wikipost?id=<?php echo $this->postear[$i]['id']; ?>">
+				          <a href="blog/wikipost?id=<?php echo $this->postear[$i]['id']; ?>">
 				          	continue leyendo...
 				          </a>
 				      </p>
@@ -104,8 +111,8 @@
         </table>
 					
 				<ul class="pager">
-					<li class="previous"><a href="#">&larr; Anterior</a></li>
-					<li class="next"><a href="#">Siguiente &rarr;</a></li>
+					<li class="previous"><a href="#">&larr; Previous</a></li>
+					<li class="next"><a href="#">Next &rarr;</a></li>
 				</ul>
 
 			</div>
@@ -113,9 +120,9 @@
 
 				<div class="well text-center">
 					<p class="lead">
-						Si lo deseas puedes suscribirte para nuestras Noticias continuas!
+						Si lo deseas puedes suscribirte para recibir nuestras Noticias continuas!
 					</p>
-					<button class="btn btn-primary btn-lg">Subscribete Hoy</button>
+					<button onclick="window.location.href='/contactos'" class="btn btn-primary btn-lg">Subscribete Hoy</button>
 				</div>
 
 				<!-- Latest Posts -->
