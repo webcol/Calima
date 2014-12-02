@@ -7,13 +7,15 @@
  */
 
 
-class PHPSeguridad {
+class Cf_PHPSeguridad {
 
 //Seguridad
     
     public function filtrarTexto($texto){
         return strip_tags($texto);
     }
+    
+     
     
     public function filtrarCaracteresEspeciales($texto){
         return htmlspecialchars($texto, ENT_QUOTES);
