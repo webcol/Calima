@@ -26,7 +26,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="index.html" class="navbar-brand">CfWiki</a>
+					<a href="index.html" class="navbar-brand">CfBlog</a>
 				</div>
 				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 					<form class="navbar-form navbar-right" role="search">
@@ -36,10 +36,11 @@
 				      <button type="submit" class="btn btn-default">Submit</button>
 				    </form>
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="about.html">About</a></li>
-					</ul>
+					<li class="active"><a href="<?php echo BASE_URL; ?>/index">Inicio</a></li>
+					<li><a href="<?php echo BASE_URL; ?>/index">Servicios</a></li>
+					<li><a href="<?php echo BASE_URL; ?>/apoyanos">Apoyanos</a></li>
+					<li><a href="<?php echo BASE_URL; ?>/contactos">Contactos</a></li>
+				</ul>
 				</nav>
 			</div>
 		</header>
@@ -48,7 +49,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-                                    <h1>Kalima Wiki</h1>
+                                    <h1>Calima Blog</h1>
                                     <table>
               <tr>
                <?php for($i=0; $i<count($this->postear); $i++): ?>
@@ -58,7 +59,7 @@
                                                     
 				        <div class="row">
 				          	<div class="col-sm-6 col-md-6">
-				          		<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<a href="#">Signs</a>
+				          		<span class="glyphicon glyphicon-folder-open"></span> &nbsp;<a href="#">Autor: &nbsp;<?php echo $this->postear[$i]['autor']; ?> </a>
 				          		&nbsp;&nbsp;<span class="glyphicon glyphicon-bookmark"></span> <a href="#">Aries</a>, <a href="#">Fire</a>, <a href="#">Mars</a>
 				          	</div>
 				          	<div class="col-sm-6 col-md-6">
@@ -69,7 +70,7 @@
 
 				          <hr>
 
-				          <img src="<?PHP ECHO BASE_URL ?>/public_/img/<?php echo $this->postear[$i]['imagen']; ?>" class="img-responsive">
+				          <img src="<?PHP ECHO BASE_URL ?>/public_/images/img/<?php echo $this->postear[$i]['imagen']; ?>" class="img-responsive">
 
 				          <br />
 
@@ -89,7 +90,19 @@
               
         </table>
                                    <?php if(isset($this->video)){ ?> 
-                                    <div class="well">  <iframe type="text/html" width="500" height="385" src="http://www.youtube.com/embed/<?php echo $this->video['idvideo']; ?>" frameborder="0"></iframe> </div>
+                                    
+				
+				
+				<div class="bs-example">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="//www.youtube.com/embed/<?php echo $this->video['idvideo']; ?>" allowfullscreen></iframe>
+    </div>
+  </div>
+				
+				
+				
+				
+				
                                     <?php } ?>
 
 					<ul class="pager">
@@ -156,7 +169,7 @@
 						<p class="lead">
 							Si lo deseas puedes suscribirte para nuestras Noticias continuas!
 						</p>
-						<button class="btn btn-primary btn-lg">Suscribete hoy</button>
+						<button onclick="window.location.href='/contactos'" class="btn btn-primary btn-lg">Subscribete Hoy</button>
 					</div>
 
 					<!-- Latest Posts -->
