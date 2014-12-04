@@ -10,7 +10,7 @@ class contactosControlador extends Cf_Controlador
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
         $this->cargaAyudante('PHPAyuda');
-        $this->_ayuda= new PHPAyuda;
+        $this->_ayuda= new Cf_PHPAyuda;
     }
     
     public function index()

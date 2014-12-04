@@ -14,11 +14,11 @@ class indexControlador extends Cf_Controlador
         $this->_exc = new PHPExcel;
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
-        $this->cargaAyudante('PHPAyuda');
-        $this->_ayuda= new PHPAyuda;
-        $this->cargaAyudante('PHPAyuda');
+        $this->cargaAyudante('Cf_PHPAyuda');
+        $this->_ayuda= new Cf_PHPAyuda;
+        $this->cargaAyudante('Cf_PHPAyuda');
 		$this->cargaAyudante('Cf_PHPSeguridad');
-        $this->_seg= new PHPSeguridad;
+        $this->_seg= new Cf_PHPSeguridad;
         $this->_sesion=new Cf_Sesion();
         
     }

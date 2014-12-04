@@ -22,14 +22,16 @@ class blogControlador extends Cf_Controlador {
         $datas = $this->cargaModelo('blog');       
         
         $this->_vista->postear= $datas->llamarDatosBlog();
+        $this->_vista->categorias= $datas->llamarDatosCategoria();
+        $this->_vista->tags= $datas->llamarDatosTags();
         $this->_vista->titulo = 'Blog Calima Framework';
-        $this->_vista->imprimirVista('index', 'blog');        
+        $this->_vista->imprimirVista('index', 'blog');       
         
     }
     public function crearpost(){
         $datas = $this->cargaModelo('blog');       
         
-        $this->_ayuda->$this->_vista->postear= $datas->llamarDatosBlog();
+        $this->_vista->postear= $datas->llamarDatosBlog();
         $this->_vista->titulo = 'Blog Calima Framework crear post';
         $this->_vista->imprimirVista('crearpost', 'blog');  
         
@@ -39,7 +41,9 @@ class blogControlador extends Cf_Controlador {
         $datas = $this->cargaModelo('blog');       
         
         $this->_vista->postear= $datas->llamarDatosBlog();
+        $this->_vista->tags= $datas->llamarDatosTags();
         $this->_vista->comentarios= $datas->llamarComentarios();
+        $this->_vista->categorias= $datas->llamarDatosCategoria();
         $this->_vista->contar= $datas->contarComentarios($_GET['id']);
         $this->_vista->video= $datas->llamarDatosBlogId($_GET['id']);
         $this->_vista->titulo = 'Blog 1 Calima Framework';
