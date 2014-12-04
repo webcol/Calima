@@ -23,6 +23,24 @@ class blogModelo extends Cf_Modelo {
         return $post=$this->_bd->resultset();
         
     }
+    
+    public function llamarDatosCategoria(){
+        //echo DB_HOST;
+        $cate=$this->_bd->consulta('select * from categoria ');
+        return $cate=$this->_bd->resultset();//=$this->_bd->resultset();$post->fetchall();
+        
+       
+    }
+    
+    public function llamarDatosTags(){
+        //echo DB_HOST;
+        $post=$this->_bd->consulta('select * from tags ');
+        return $post=$this->_bd->resultset();//=$this->_bd->resultset();$post->fetchall();
+        
+       
+    }
+    
+    
     public function llamarDatosBlog(){
         //echo DB_HOST;
         $post=$this->_bd->consulta('select * from blog ');
