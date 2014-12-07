@@ -6,13 +6,13 @@ date_default_timezone_set('America/Bogota');
 /* Set default date format */
 define('Cf_FORMATO_FECHA', 'l, d F Y');
 
-/* CalimaFramework license key */
+/* CalimaFramework clave de licencia */
 define('Cf_LICENSE', 'Cf-O17N-JHK8-TDJL-B5AO-8WKA'); //'FREE-5RTY-POI8-0UYT-IUYT-TGH6'
 
-/* Enable or disable warning messages */
+/* mensajes de warnin */
 define('CF_DEBUG', TRUE);
 
-/* Default application locale */
+/* Idioma local */
 define('CF_LOCALE', 'es_ES');
 
 /* Create una cuenta con google analytics y agrega el UA en la constante */
@@ -27,10 +27,11 @@ define('CF_LOCALE_TIME_FORMAT', ' %T');
 /* Default location to store application data. Must be protected from public. */
 define('CF_PATH_DATA', dirname(__FILE__) . '/Cf-data');
 
-/* More information on this file at http://www.calimaframework.com/info/ */
+/* Mas informacion para este archivo http://www.calimaframework.com/info/ */
 
 #Configuracion Basica
-define('BASE_URL', 'http://localhost/calima/');
+
+define('Cf_BASE_URL', 'http://localhost/calima/');
 define('CONTROLADOR_INICIAL', 'index');
 define('ADICIONALES_VISTA', 'adicionales');
 
@@ -39,8 +40,10 @@ define('CF_AP_SLOGAN', 'Tu Framework php MVC hispano ');
 define('CF_AP_EMPRESA', 'www.webcol.net');
 
 #webcol seguridad
-define('CF_KEY_MD5', 'P0L1');
+define('Cf_KEY_MD5', 'P0L1');
 
+// en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de Cf_PHPSeguridad
+define('Cf_CSRF_SECRET','Cfbeta');
 
 #base de datos
 // Configuracion de tu base de datos
