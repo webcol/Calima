@@ -9,7 +9,7 @@ class contactosControlador extends Cf_Controlador
         parent::__construct();
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
-        $this->cargaAyudante('PHPAyuda');
+        $this->cargaAyudante('Cf_PHPAyuda');
         $this->_ayuda= new Cf_PHPAyuda;
     }
     

@@ -14,8 +14,8 @@ class blogControlador extends Cf_Controlador {
     public function __construct() {
         parent::__construct();
         
-        $this->cargaAyudante("PHPAyuda");
-        $this->_ayuda = new PHPAyuda;
+        $this->cargaAyudante("Cf_PHPAyuda");
+        $this->_ayuda = new Cf_PHPAyuda;
     }
     
     public function index(){
