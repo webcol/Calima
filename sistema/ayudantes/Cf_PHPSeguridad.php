@@ -54,4 +54,52 @@ class Cf_PHPSeguridad {
         $correcta = md5($secreta.$sid.$formulario);
         return ($token == $correcta);
     }
+    
+    function obtenerDireccionIP(){
+    if (!empty($_SERVER ['HTTP_CLIENT_IP'] ))
+      $ip=$_SERVER ['HTTP_CLIENT_IP'];
+    elseif (!empty($_SERVER ['HTTP_X_FORWARDED_FOR'] ))
+      $ip=$_SERVER ['HTTP_X_FORWARDED_FOR'];
+    else
+      $ip=$_SERVER ['REMOTE_ADDR'];
+
+    return $ip;
+	}
+	
+    function restringirIp($ip){
+        $ipCliente = $this->obtenerDireccionIP();
+
+        if($ipCliente == $ip){
+        return true;
+        }
+        else{
+        header('location: http://www.tusitioweb/redireccion');
+        exit;
+        }
+    }
+	
+	function restringirConjuntoIps($ips){
+    $ipCliente = obtenerDireccionIP();
+
+    if (in_array($ipCliente,$ips)){
+        return true;
+    }
+    else{
+        header('location: http://direccion_envio_salida');
+        exit;
+    }
+	}
+	
+	function restringirRango(){
+    $ipCliente = obtenerDireccionIP();
+
+    if(substr($ipCliente, 0, 8 ) == "150.214."){
+        return true;
+    }
+    else{
+        header('location: http://direccion_envio_salida');
+        exit;
+    }
+	}
+    
 }
