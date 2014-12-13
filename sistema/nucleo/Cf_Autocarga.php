@@ -18,19 +18,3 @@ spl_autoload_register ( function ( $class )  {
         return true;
      } 
 } );
-
-
-// se define una funcion para la autocarga de los metodos de las clases del systema/nucleo php > 5.3
-/*spl_autoload_register(function ($class) {
-   // include 'clases/' . $class . '.clase.php';
-    include APP_PATH . ucfirst($class) . '.php'; 
-});*/
-
-// se define una funcion para la autocarga de los metodos de las clases del systema/core
-/*function cargaClasesCore($class){ 
-	if(file_exists(APP_PATH . ucfirst(strtolower($class)) . '.php')){
-	include APP_PATH . ucfirst(strtolower($class)) . '.php'; 
-	}
-}
-
-spl_autoload_register( 'cargaClasesCore' );*/
