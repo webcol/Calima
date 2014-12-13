@@ -18,6 +18,13 @@ define('CF_LOCALE', 'es_ES');
 /* Create una cuenta con google analytics y agrega el UA en la constante */
 define('CF_ANALYTICS', 'UA-xxxxxx');
 
+
+/* con la siguiente constante podras crear una ip fija de tu empresa para hacer 
+ * pruebas en tu entorno de red basado en tu ip que te ofrece tu proveedor de servicio 
+ */
+define('Cf_IPPRUEBAS', 'x.x.x.x');
+
+
 /* Translatable locale format */
 define('CF_LOCALE_DATE_FORMAT', '%A, %d %B %G');
 
