@@ -9,9 +9,9 @@
 		<title>Aries Sun Sign March 21 - April 19</title>
 
 		<!-- Bootstrap CSS file -->
-	<link href="<?PHP ECHO BASE_URL ?>/public_/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="<?PHP ECHO BASE_URL ?>/public_/css/bootstrap-theme.min.css" rel="stylesheet" />
-	<link href="<?PHP ECHO BASE_URL ?>/public_/css/blog.css" rel="stylesheet" />
+	<link href="<?PHP ECHO Cf_BASE_URL ?>/public_/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="<?PHP ECHO Cf_BASE_URL ?>/public_/css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="<?PHP ECHO Cf_BASE_URL ?>/public_/css/blog.css" rel="stylesheet" />
 	</head>
 
 	<body>
@@ -36,10 +36,10 @@
 				      <button type="submit" class="btn btn-default">Submit</button>
 				    </form>
 					<ul class="nav navbar-nav">
-					<li class="active"><a href="<?php echo BASE_URL; ?>/index">Inicio</a></li>
-					<li><a href="<?php echo BASE_URL; ?>/index">Servicios</a></li>
-					<li><a href="<?php echo BASE_URL; ?>/apoyanos">Apoyanos</a></li>
-					<li><a href="<?php echo BASE_URL; ?>/contactos">Contactos</a></li>
+					<li class="active"><a href="<?php echo Cf_BASE_URL; ?>/index">Inicio</a></li>
+					<li><a href="<?php echo Cf_BASE_URL; ?>/index">Servicios</a></li>
+					<li><a href="<?php echo Cf_BASE_URL; ?>/apoyanos">Apoyanos</a></li>
+					<li><a href="<?php echo Cf_BASE_URL; ?>/contactos">Contactos</a></li>
 				</ul>
 				</nav>
 			</div>
@@ -70,7 +70,7 @@
 
 				          <hr>
 
-				          <img src="<?PHP ECHO BASE_URL ?>/public_/images/img/<?php echo $this->postear[$i]['imagen']; ?>" class="img-responsive">
+				          <img src="<?PHP ECHO Cf_BASE_URL ?>/public_/images/img/<?php echo $this->postear[$i]['imagen']; ?>" class="img-responsive">
 
 				          <br />
 
@@ -112,7 +112,7 @@
 					<!-- Comment form -->
 					<div class="well">
 						<h4>Apoyanos! deja tu comentario</h4>
-                                                <form action="<?PHP ECHO  BASE_URL; ?>blog/wikipost?id=<?php echo $_GET['id']?>" method="post" role="form" class="clearfix">
+                                                <form action="<?PHP ECHO  Cf_BASE_URL; ?>blog/wikipost?id=<?php echo $_GET['id']?>" method="post" role="form" class="clearfix">
 						  <div class="col-md-6 form-group">
 						    <label class="sr-only" for="nombre">Nombre</label>
                                                     <input name="nombre" type="text" class="form-control" id="nombre" placeholder="Nombre">
