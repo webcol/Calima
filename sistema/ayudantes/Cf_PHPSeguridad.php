@@ -101,5 +101,28 @@ class Cf_PHPSeguridad {
         exit;
     }
 	}
+        
+        
+        /**
+ *
+ * @strip injection chars from email headers
+ *
+ * @param string $string
+ *
+ * return string
+ *
+ */
+function emailSeguro($cadena) {
+     return  preg_replace( '((?:\n|\r|\t|%0A|%0D|%08|%09)+)i' , '', $cadena );
+}
+
+/*** example usage 
+$from = "sender@example.com
+Cc:victim@example.com";
+
+if(strlen($from) < 100)
+{
+    $from = emailSeguro($from);
+}***/
     
 }
