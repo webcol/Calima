@@ -40,6 +40,11 @@ class Cf_PHPSeguridad {
         }
         return $cadenaAleatoria;
     }
+    // encriptacion
+    function cifrado($clave){
+        $cfi=sha1(md5($clave));
+        return $clave=Cf_KEY_MD5.$cfi;
+    }
     // Protecion CSRF
     public function generoTokenDeFormulario($formulario) {
         $secreta =  Cf_CSRF_SECRET.$this->generarCadenaAleatoria();
@@ -103,7 +108,7 @@ class Cf_PHPSeguridad {
 	}
         
         
-        /**
+    /**
  *
  * @strip injection chars from email headers
  *
