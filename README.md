@@ -11,7 +11,9 @@ Corriendo sitios web y app con twitter bootstrap 3.3
 
 <br>
 
-@calimaframework<br> @efrasoft<br> @webcolgroup<br> @whitehats<br>
+@calimaframework<br> @efrasoft<br> @webcolgroup<br> @whitehats<br> www.calimaframework.com<br>
 www.webcol.net - ceo@webcol.net<br>
 
 Herramienta de desarrollo opensource libre para descarga a la espera de tu aporte como desarrollador 
+
+Licencia CopyLeft
