@@ -45,6 +45,7 @@ define('ADICIONALES_VISTA', 'adicionales');
 define('CF_AP_NOMBRE', 'CalimaFramework');
 define('CF_AP_SLOGAN', 'Tu Framework php MVC hispano ');
 define('CF_AP_EMPRESA', 'www.webcol.net');
+define('CF_AP_CREDITOS', 'CopyLeft 2015 Debeloped by www.webcol.net');
 
 #webcol seguridad
 define('Cf_KEY_MD5', 'P0L1');
