@@ -66,5 +66,13 @@ class usuarioControlador extends Cf_Controlador
         $this->_ayuda->redireccionUrl('usuario');
         
         }
-    }        
+    }
+    
+     public function cerrarSesion(){
+        $this->_sesion->iniciarSesion('_s', false);
+        session_destroy();
+        $this->_sesion->destruir('usuario');
+        $this->_ayuda->redireccionUrl('usuario');
+        
+    }
 }
