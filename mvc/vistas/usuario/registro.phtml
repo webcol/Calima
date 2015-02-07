@@ -1,107 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <!-- Title and other stuffs -->
-  <title>Register - MacAdmin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="author" content="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="<?PHP ECHO Cf_BASE_URL ?>/public_/img/favicon.ico">
 
-  <!-- Stylesheets -->
-  <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/style/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="<?PHP ECHO Cf_BASE_URL ?>/public_/style/font-awesome.css">
-  <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/style/style.css" rel="stylesheet">
-  <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/style/bootstrap-responsive.css" rel="stylesheet">
-  
-  <!-- HTML5 Support for IE -->
-  <!--[if lt IE 9]>
-  <script src="js/html5shim.js"></script>
-  <![endif]-->
+    <title>Signin Template for Bootstrap</title>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="<?PHP ECHO Cf_BASE_URL ?>/public_/img/favicon/favicon.png">
-</head>
+    <!-- Bootstrap core CSS -->
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/css/bootstrap.min.css" rel="stylesheet">
 
-<body>
+    <!-- Custom styles for this template -->
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/css/signin.css" rel="stylesheet">
 
-<div class="admin-form">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <!-- Widget starts -->
-            <div class="widget wred">
-              <div class="widget-head">
-                <i class="icon-lock"></i> Register 
-              </div>
-              <div class="widget-content">
-                <div class="padd">
-                  
-                    <form method="post" action="<?PHP ECHO Cf_BASE_URL ?>usuario/crearRegistro" class="form-horizontal">
-                    <!-- Registration form starts -->
-                                      <!-- Name -->
-                                          <div class="form-group">
-                                            <label class="control-label col-lg-3" for="name">Nombre</label>
-                                            <div class="col-lg-9">
-                                              <input name="nombre" type="text" class="form-control" id="name">
-                                            </div>
-                                          </div>   
-                                          <!-- Email -->
-                                          <div class="form-group">
-                                            <label class="control-label col-lg-3" for="email">Email</label>
-                                            <div class="col-lg-9">
-                                              <input name="email" type="text" class="form-control" id="email">
-                                            </div>
-                                          </div>
-                                          
-                                          <!-- Nivel -->
-                                          <div class="form-group">
-                                            <label class="control-label col-lg-3" for="nivel">Nivel</label>
-                                            <div class="col-lg-9">
-                                              <input name="nivel" type="text" class="form-control" id="email">
-                                            </div>
-                                          </div>                                                                                  
-                                          
-                                          <!-- Password -->
-                                          <div class="form-group">
-                                            <label class="control-label col-lg-3" for="email">Password</label>
-                                            <div class="col-lg-9">
-                                              <input name="clave" type="password" class="form-control" id="password">
-                                            </div>
-                                          </div>
-                                          <!-- Accept box and button s-->
-                                          <div class="form-group">
-                                            <div class="col-lg-9 col-lg-offset-3">
-											  <div class="checkbox">
-                                              <label>
-                                                  <input name="accept" type="checkbox"> Accept Terms &amp; Conditions
-                                              </label>
-											  </div>
-                                              <br />
-                                              <button type="submit" class="btn btn-danger">Register</button>
-                                              <button type="reset" class="btn btn-success">Reset</button>
-                                            </div>
-                                          </div>
-										  <br />
-                  </form>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="<?PHP ECHO Cf_BASE_URL ?>/public_/js/ie-emulation-modes-warning.js"></script>
 
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+        <form method="post" action="<?PHP ECHO Cf_BASE_URL ?>usuario/crearRegistro" class="form-horizontal">
+        <h2 class="form-signin-heading">Registro</h2>
+        <label for="inputEmail" class="sr-only">Nombre</label>
+        <input name="nombre" type="text" class="form-control" id="name" placeholder="Nombre" required>
+        <label for="inputEmail" class="sr-only">Apellido</label>
+        <input name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input name="email" type="text" class="form-control" id="email" placeholder="Email" required>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input name="clave"  type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-danger">Sign in</button>
+	<button type="reset" class="btn btn-default">Reset</button>
+        <div>
+        <div class="widget-foot">
+                 Already Registred? <a href="<?PHP ECHO Cf_BASE_URL ?>usuario">Login</a>
                 </div>
-              </div>
-                <div class="widget-foot">
-                  Already Registred? <a href="<?PHP ECHO Cf_BASE_URL ?>usuario">Login</a>
-                </div>
-            </div>  
-      </div>
-    </div>
-  </div> 
-</div>
-	
-		
+        </div>
+      </form>
 
-<!-- JS -->
-<script src="<?PHP ECHO Cf_BASE_URL ?>/public_/js/jquery.js"></script>
-<script src="<?PHP ECHO Cf_BASE_URL ?>/public_/js/bootstrap.js"></script>
-</body>
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="<?PHP ECHO Cf_BASE_URL ?>/public_/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
