@@ -3,6 +3,7 @@
 class Cf_Bootstrap {
     
     
+
     public static function actuar(Cf_Solicitud $peticion){
         $controlador = $peticion->getControlador() . 'Controlador';
         //definimos la ruta al controlador
@@ -30,7 +31,7 @@ class Cf_Bootstrap {
             }
             
         } else {
-            throw new Exception('houston tenemos un problema! controlador no encontado');
+            header('Location: '.  Cf_BASE_URL.'error/');           
         }
     }
 }
