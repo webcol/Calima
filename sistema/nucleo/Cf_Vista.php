@@ -20,7 +20,9 @@ class Cf_Vista
             include_once SITE_ROOT . 'mvc/vistas' . DS . ADICIONALES_VISTA . DS . 'pie_de_pagina.php';
         } 
         else {
-            throw new Exception('houston tenemos un problema! vista no encontrada');
+            
+            header('Location: '.  Cf_BASE_URL.'error/index'.'?error='.'vista' );
+            
         }
     }
 }
