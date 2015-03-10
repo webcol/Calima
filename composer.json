@@ -1,0 +1,22 @@
+{
+	"name": "webcol/calima",
+	"description": "Framework PHP en español",
+	"version": "1.0.0-beta1",
+	"type": "project",
+	"keywords": ["framework"],
+	"homepage": "http://calimaframework.com",
+	"license": "copyleft",
+	"authors": [
+		{
+			"name": "Calimaframework Comunidad",
+			"homepage": "https://github.com/webcol/calima/graphs/contributors"
+		}
+	],
+	"support": {
+		"email": "info@calimaframewor.com",
+		"issues": "https://github.com/webcol/Calima/issues",
+		"blog": "http://calimaframework.com/blog",
+		"source": "https://github.com/webcol/Calima"
+	}
+	
+}
