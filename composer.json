@@ -17,6 +17,19 @@
 		"issues": "https://github.com/webcol/Calima/issues",
 		"blog": "http://calimaframework.com/blog",
 		"source": "https://github.com/webcol/Calima"
-	}
+	},
 	
+	"bin": [
+		"sistema/nucleo/Cf_Bootstrap.php"
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"classmap" : [
+			"sistema/ayudantes/",
+			"sistema/librerias/",
+			"sistema/nucleo/"
+		]
+	}
 }
