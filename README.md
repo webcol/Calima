@@ -1,10 +1,7 @@
 Calima Framework  Beta Vs 1.0
 ======
-<br><b> <font color="#ff0000">El día 6 de marzo a las 6:30 pm se llevara a cabo una charla de Php<br>
-en el auditorio de la Universidad Uniciencia - Cali en la Cr 30a con Av roosevelt<br>
-No faltes se dará premio al que presente proyecto o ideas para desarrollar en Cf<br>
-Reserva tu entrada es GRATIS cupos limitados
-http://www.meetup.com/Calima-Framework/events/220491503/ </font></b>
+
+
 
 <img src="http://www.calimaframework.com/public_/images/ascii_Cf.PNG"/>
 
@@ -12,7 +9,7 @@ http://www.meetup.com/Calima-Framework/events/220491503/ </font></b>
 
 Framework PHP en español
 
-Basado en Diferentes Frameworks PHP
+Basado en Diferentes Frameworks PHP y codigo libre php
 
 Desarrollado para usar el patron MVC
 
@@ -24,6 +21,8 @@ Corriendo sitios web y app con twitter bootstrap 3.3
 www.webcol.net - ceo@webcol.net<br>
 
 Herramienta de desarrollo opensource libre para descarga a la espera de tu aporte como desarrollador 
+
+Cf agradece a toda persona que con su aporte publica codigo Open Source para su reulizacion
 
 Licencia CopyLeft
 
