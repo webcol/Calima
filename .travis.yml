@@ -14,7 +14,7 @@ php:
 notifications:
   email:
     - info@calimaframework.com
-    - calimaframework@gmail.com 
+    - calimaframework@gmail.com
  
 matrix:
     allow_failures:
