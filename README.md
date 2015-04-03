@@ -83,5 +83,8 @@ https://twitter.com/calimaframework
 https://www.facebook.com/calimaframework
 http://www.meetup.com/CalimaFramework/members/
 
-Licencia CopyLeft
+Licencia
+-----------------
+
+Calima framework Cf es software openSourced licenciado bajo [CopyLeft] (http://es.wikipedia.org/wiki/Copyleft)
 
