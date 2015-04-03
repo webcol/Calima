@@ -1,7 +1,6 @@
 {
 	"name": "webcol/calima",
 	"description": "Framework PHP en español",
-	"version": "1.0.0-beta2",
 	"type": "project",
 	"keywords": ["framework"],
 	"homepage": "http://calimaframework.com",
