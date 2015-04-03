@@ -7,7 +7,7 @@ Calima Framework  PHP Beta Vs 1.0
 Calima Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
 
 
-Cf  Trae embebido [Twitter bootstrap 3.3] (http://getbootstrap.com/). Esta construido basado en metodologias de distintos Framework php y usa algunos ejemplos opensource editados, 
+Cf  Trae embebido [Twitter bootstrap 3.3] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
 buscamos una fácil instalación un código claro y limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
 
 
@@ -38,7 +38,7 @@ DOCUMENTACION
 -------------
 
 Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y 
- [Guia de ayuda](http://www.calimaframework.com/blog/) sigue cada pagina de ayuda y termina sus ejemplos.
+ [Guía de ayuda](http://www.calimaframework.com/blog/) sigue cada página de ayuda y termina sus ejemplos.
 
 
 
@@ -55,8 +55,8 @@ Multiplataforma
 COLABORA
 -----------------
 
-Si crees que puedes ayudar a la comunidad de alguna manera no lo dudes y ponte en contacto con al comunidad Cf
-Cf cree que tu apoyo es demasiado importante sin pensar en lo minimo que sea, con tu ayuda hacemos de esta herramienta cada dia una excelente opcion de desarrollo para la comunidad  de habla hispana
+Si crees que puedes ayudar de alguna manera no lo dudes y ponte en contacto con la comunidad Cf
+Cf cree que tu apoyo es demasiado importante sin pensar en lo mínimo que sea,  con tu ayuda hacemos de esta herramienta cada día una excelente opción de desarrollo para la comunidad  de habla hispana.
 
 Tu puede colaborar con:
 
@@ -64,9 +64,9 @@ Tu puede colaborar con:
 * [Report issues](https://github.com/webcol/Calima/issues)
 * Colabora con
     - Ideas de diseño o themas para el marco de trabajo.
-    - Desarrollo de ayudantes, librerias o servicios web.
-	- Documentacion libros, documentar codigo, wiki, blog, foro
-	- Envia errores detectados o nuevas propuestas con las que crees podrias ayudar
+    - Desarrollo de ayudantes, librerías o servicios web.
+    - Documentación libros, documentar código, wiki, blog, foro
+    - Envía errores detectados o nuevas propuestas con las que crees podrías ayudar
 
 
 DONACIONES
