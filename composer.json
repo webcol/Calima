@@ -38,5 +38,6 @@
 			"sistema/librerias/",
 			"sistema/nucleo/"
 		]
-	}
+	},
+        "minimum-stability": "stable"
 }
