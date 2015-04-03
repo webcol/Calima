@@ -7,8 +7,8 @@ Calima Framework  PHP Beta Vs 1.0
 Calima Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
 
 
-Cf  Trae embebido Twitter bootstrap 3.3 esta construido basado en metodologias de distintos Framework php y usa algunos ejemplos opensource editados 
-buscamos una facil instalación un codigo claro y limpio en español y basado en el modelo MVC bajo el paradigma orientado a objetos
+Cf  Trae embebido [Twitter bootstrap 3.3] (http://getbootstrap.com/). Esta construido basado en metodologias de distintos Framework php y usa algunos ejemplos opensource editados, 
+buscamos una fácil instalación un código claro y limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
 
 
 [![Latest Stable Version](https://poser.pugx.org/webcol/calima/v/stable.svg)](https://packagist.org/packages/webcol/calima) 
@@ -23,19 +23,19 @@ buscamos una facil instalación un codigo claro y limpio en español y basado en
 
 
 ESTRUCTURA DE DIRECTORIOS
-**------------------**
+------------------
 
 ```
-mvc/               implementa el modelo vista controlador
+mvc/                    implementa el modelo vista controlador
 public_/                archivos y direcrectorios publicos css, js, imagenes
-respaldos/           respaldos de la aplicacion
-sistema/               ayudantes, librerias, servicios, nucleo
-temporal/			informacion temporal 
+respaldos/              respaldos de la aplicacion
+sistema/                ayudantes, librerias, servicios, nucleo
+temporal/               informacion temporal 
 ```
 
 
 DOCUMENTACION
-**-------------**
+-------------
 
 Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y 
  [Guia de ayuda](http://www.calimaframework.com/blog/) sigue cada pagina de ayuda y termina sus ejemplos.
@@ -43,7 +43,7 @@ Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y
 
 
 REQUERIMIENTOS
-**------------**
+------------
 
 PHP 5.3.
 Apache 2.2
@@ -53,7 +53,7 @@ Multiplataforma
 
 
 COLABORA
-**-----------------**
+-----------------
 
 Si crees que puedes ayudar a la comunidad de alguna manera no lo dudes y ponte en contacto con al comunidad Cf
 Cf cree que tu apoyo es demasiado importante sin pensar en lo minimo que sea, con tu ayuda hacemos de esta herramienta cada dia una excelente opcion de desarrollo para la comunidad  de habla hispana
@@ -70,10 +70,10 @@ Tu puede colaborar con:
 
 
 DONACIONES
-**-----------------**
+-----------------
 
 CONTACTOS
-**-----------------**
+-----------------
 
 http://calimaframework.com/
 soporte@calimaframework.com/
