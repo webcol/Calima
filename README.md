@@ -20,7 +20,8 @@ buscamos una fácil instalación un código claro y limpio en español, basado e
 [![Code Coverage](https://scrutinizer-ci.com/g/webcol/Calima/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webcol/Calima/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/webcol/Calima/badges/build.png?b=master)](https://scrutinizer-ci.com/g/webcol/Calima/build-status/master)
 
-
+[![Code Climate](https://codeclimate.com/github/webcol/Calima/badges/gpa.svg)](https://codeclimate.com/github/webcol/Calima)
+[![Test Coverage](https://codeclimate.com/github/webcol/Calima/badges/coverage.svg)](https://codeclimate.com/github/webcol/Calima)
 
 ESTRUCTURA DE DIRECTORIOS
 ------------------
