@@ -25,10 +25,20 @@ class indexControlador extends Cf_Controlador
     
     public function index()
     { 
-        $this->_vista->titulo = 'CalimaFramework';
-        $this->_vista->imprimirVista('index', 'inicio');
-        $this->_sesion->iniciarSesion('_s', false);
-    }  
+        
+               
+        
+        if(Cf_CONFIG_INICIO==true){
+            $this->_vista->titulo = 'CalimaFramework';
+            $this->_vista->imprimirVista('index', 'instalador');
+            $this->_sesion->iniciarSesion('_s', false);
+        }elseif (Cf_CONFIG_INICIO=='false') {
+            
+            $this->_vista->titulo = 'CalimaFramework';
+            $this->_vista->imprimirVista('index', 'instalador');
+            $this->_sesion->iniciarSesion('_s', false);
+        }
+    }
     
     public function filtro($texto){
         

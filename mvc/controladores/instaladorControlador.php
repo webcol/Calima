@@ -39,7 +39,11 @@ class instaladorControlador extends Cf_Controlador {
     public function paso1(){
         
                $proyecto=$_POST['proyecto'];
-               $analytics="'".$_POST['analytics']."'";
+               if(isset($_POST['analytics'])){
+                    $analytics="'".$_POST['analytics']."'";
+               }else{
+                   $analytics="'"."UA-xxxxxx"."'";
+               }
                
                $hostbd="'".$_POST['hostbd']."'";
                $nombrebd="'".$_POST['nombrebd']."'";
