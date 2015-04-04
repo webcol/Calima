@@ -86,5 +86,5 @@ http://www.meetup.com/CalimaFramework/members/
 Licencia
 -----------------
 
-Calima framework Cf es software openSourced licenciado bajo [CopyLeft] (http://es.wikipedia.org/wiki/Copyleft)
+Calima framework Cf es software openSourced licenciado bajo [Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
 
