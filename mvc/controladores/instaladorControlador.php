@@ -15,6 +15,7 @@ class instaladorControlador extends Cf_Controlador {
     //put your code here
     private $_basedatos;
     private $_ayuda;
+    private $_analytics;
     public function __construct() {
         parent::__construct();
         $this->_basedatos=$this->cargaModelo('instalador'); 
@@ -30,26 +31,45 @@ class instaladorControlador extends Cf_Controlador {
     }
     
     //metodo para crear la base de datos de inicio de proyecto
-    private function crearBaseDatos(){
+    public function crearBaseDatos(){
         
+       
         $this->_basedatos->crearTablas();
-        $this->_ayuda->redireccionUrl('index/index');
+        $this->_ayuda->redireccionUrl('');
+       
     }
     
-    public function paso1(){
+    public function verificarBd(){
         
                $proyecto=$_POST['proyecto'];
-               if(isset($_POST['analytics'])){
-                    $analytics="'".$_POST['analytics']."'";
-               }else{
-                   $analytics="'"."UA-xxxxxx"."'";
+               if(isset($_POST['analytics'])!=''){
+                    $this->_analytics="'".$_POST['analytics']."'";
                }
+                   $this->_analytics="'"."UA-xxxxxx"."'";
                
+               
+               $analytics=$this->_analytics;
                $hostbd="'".$_POST['hostbd']."'";
                $nombrebd="'".$_POST['nombrebd']."'";
                $usuariobd="'".$_POST['usuariobd']."'";
                $clavebd="'".$_POST['clavebd']."'";
                $config="'".$_POST['config']."'";
+               
+             $a= $this->_basedatos->verificarBdM($_POST['nombrebd'],$_POST['usuariobd'],$_POST['clavebd']);
+             
+             if($a){
+                 
+                $this->paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$usuariobd,$clavebd,$config);
+             }else{
+                 $this->_ayuda->redireccionUrl('instalador?error="Los datos que estas ingresando no coniciden con los de la BD"');
+             }
+        
+    }
+
+
+    public function paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$usuariobd,$clavebd,$config){
+        
+               
                
                
         //$this->crearBaseDatos($_POST['hostbd'],$_POST['nombrebd'],$_POST['usuariobd'],$_POST['clavebd']);
@@ -102,7 +122,7 @@ class instaladorControlador extends Cf_Controlador {
         fwrite($file, "#Configuracion Basica" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* La siguiente CONSTANTE permite el apuntapiento para archivos js, css, imagenes desde la vista hacia el directorio _public */" . PHP_EOL);
-        fwrite($file, "define('Cf_BASE_URL', 'http://localhost/$proyecto/');" . PHP_EOL.PHP_EOL);
+        fwrite($file, "define('Cf_BASE_URL', 'http://localhost$proyecto');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* definimos un controlador inicial en nuestro proyecto */" . PHP_EOL);
         fwrite($file, "define('CONTROLADOR_INICIAL', 'index');" . PHP_EOL.PHP_EOL);
@@ -141,7 +161,9 @@ class instaladorControlador extends Cf_Controlador {
         fwrite($file, "define('CF_BD_CONECTOR', 'mysql');");
         fwrite($file, "");
         fclose($file);
-        $this->crearBaseDatos();
+        
+        $this->_ayuda->redireccionUrl('instalador/crearBaseDatos');
+        //$this->crearBaseDatos();
         }
         
     }

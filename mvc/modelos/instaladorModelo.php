@@ -17,6 +17,18 @@ class instaladorModelo extends Cf_Modelo{
         parent::__construct();
     }
     
+    public function verificarBdM($bd,$usuario,$contraseña){
+       try {
+        $gbd = new PDO("mysql:host=localhost;dbname=".$bd, $usuario, $contraseña);
+        $gbd = null;
+        return true;
+        
+        } catch (PDOException $e) {
+        
+        return false;
+        }
+    }
+    
     public function crearTablas(){
         
         $this->_bd->consulta('CREATE TABLE IF NOT EXISTS `menu` (

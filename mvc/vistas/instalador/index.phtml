@@ -46,9 +46,11 @@
         <p class="lead">A continuación usted podrá instalar las tablas de configuración de Cf llenando los campos del formulario.<br>usted debe de tener previamente creada la base de datos.</p><p>Si usted no sabe como crear la base de datos debe ver el siguiente .<a target="_blank" href="https://www.youtube.com/watch?v=xo1Y4h6t-yM">video en youtube</a></p>
         
       </div>
-
+      <?php if(isset($_GET['error'])){ ?>
+        <div class="alert alert-danger" role="alert"><?php echo $_GET['error']; ?></div>
+      <?php } ?>
       <!-- Example row of columns -->
-      <form method="post" action="instalador/paso1"  class="form-horizontal">
+      <form method="post" action="instalador/verificarBd"  class="form-horizontal">
     <div class="form-group has-success">
         <label class="col-xs-2 control-label" for="inputSuccess">Usuario</label>
         
@@ -92,13 +94,20 @@
         
         <label class="col-xs-2 control-label" for="inputSuccess">Directorio Root</label>
         <div class="col-xs-4">
-            <input name="proyecto" type="text" id="inputSuccess" class="form-control" placeholder="Directorio de Instalacion" required>
+            <input value="<?php echo substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['REQUEST_URI'], "/")+1); ?>" name="proyecto" type="text" id="inputSuccess" class="form-control" placeholder="Directorio de Instalacion" required>
             <span class="help-block">Root</span>
         </div>
         <input name="config" type="hidden" value="true"   >
     </div>
           
     <hr>
+    
+    <div class="checkbox">
+        <label>
+            <input type="checkbox"> Acepto Instalar Calima Framework y su <a href="http://calimaframework.com/politica">politica</a> de uso
+        </label>
+    </div>
+    
      <button type="submit" class="btn btn-danger">Generar Tablas</button>
     
 </form>
