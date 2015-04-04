@@ -6,6 +6,12 @@
 	"homepage": "http://calimaframework.com",
 	"license": "MIT",
 	"authors": [
+            
+                {
+                        "name": "Efrain Restrepo",
+                        "email": "efrasoft@outlook.com",
+                        "homepage": "http://calimaframework.com/autores"
+                },
 		{
 			"name": "Calimaframework Comunidad",
 			"homepage": "https://github.com/webcol/calima/graphs/contributors"
@@ -38,7 +44,10 @@
 			"sistema/ayudantes/",
 			"sistema/librerias/",
 			"sistema/nucleo/"
-		]
+		],
+                 "psr-4": {
+                    "nucleo\\": "sistemas/nucleo/"
+                }
 	},
         "minimum-stability": "stable"
 }
