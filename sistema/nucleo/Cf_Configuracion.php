@@ -44,7 +44,7 @@ define('CF_PATH_DATA', dirname(__FILE__) . '/Cf-data');
 define('Cf_BASE_URL', 'http://localhost/Calima-master/');
 
 /* definimos un controlador inicial en nuestro proyecto */
-define('CONTROLADOR_INICIAL', 'index');
+define('CONTROLADOR_INICIAL', 'instalador');
 
 /* Sedefine una CONSTANTE al directorio adicionales en la vista */
 define('ADICIONALES_VISTA', 'adicionales');
