@@ -2,7 +2,7 @@
 	"name": "webcol/calima",
 	"description": "Framework PHP en español",
 	"type": "project",
-	"keywords": ["framework"],
+	"keywords": ["framework", "Php", "MVC", "oop"],
 	"homepage": "http://calimaframework.com",
 	"license": "MIT",
 	"authors": [
@@ -18,7 +18,7 @@
 		}
 	],
 	"support": {
-		"email": "info@calimaframewor.com",
+		"email": "info@calimaframework.com",
 		"issues": "https://github.com/webcol/Calima/issues",
 		"blog": "http://calimaframework.com/blog",
 		"source": "https://github.com/webcol/Calima"
