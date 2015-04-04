@@ -22,7 +22,7 @@ define('CF_DEBUG', TRUE);
 define('CF_LOCALE', 'es_ES');
 
 /* Create una cuenta con google analytics y agrega el UA en la constante */
-define('CF_ANALYTICS', 'UA-xxxxxx-x');
+define('CF_ANALYTICS', 'UA-xxxxxx');
 
 /* con la siguiente constante podras crear una ip fija de tu empresa para hacer 
 * pruebas en tu entorno de red basado en tu ip que te ofrece tu proveedor de servicio
@@ -41,10 +41,10 @@ define('CF_PATH_DATA', dirname(__FILE__) . '/Cf-data');
 #Configuracion Basica
 
 /* La siguiente CONSTANTE permite el apuntapiento para archivos js, css, imagenes desde la vista hacia el directorio _public */
-define('Cf_BASE_URL', 'http://localhost/calima-master/');
+define('Cf_BASE_URL', 'http://localhost/Calima-master/');
 
 /* definimos un controlador inicial en nuestro proyecto */
-define('CONTROLADOR_INICIAL', 'instalador');
+define('CONTROLADOR_INICIAL', 'index');
 
 /* Sedefine una CONSTANTE al directorio adicionales en la vista */
 define('ADICIONALES_VISTA', 'adicionales');
