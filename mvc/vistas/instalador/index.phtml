@@ -94,7 +94,8 @@
         
         <label class="col-xs-2 control-label" for="inputSuccess">Directorio Root</label>
         <div class="col-xs-4">
-            <input value="<?php echo substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['REQUEST_URI'], "/")+1); ?>" name="proyecto" type="text" id="inputSuccess" class="form-control" placeholder="Directorio de Instalacion" required>
+            <input   type="text" id="inputSuccess" class="form-control" placeholder="<?php echo substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['REQUEST_URI'], "/")+1); ?>" disabled>
+            <input value="<?php echo substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['REQUEST_URI'], "/")+1); ?>" name="proyecto" type="hidden">
             <span class="help-block">Root</span>
         </div>
         <input name="config" type="hidden" value="true"   >
@@ -104,10 +105,10 @@
     
     <div class="checkbox">
         <label>
-            <input type="checkbox"> Acepto Instalar Calima Framework y su <a href="http://calimaframework.com/politica">politica</a> de uso
+            <input name="acepto" type="checkbox" required> Acepto Instalar Calima Framework y su <a target="_blank"  href="http://calimaframework.com/politica">politica</a> de uso
         </label>
     </div>
-    
+    <hr>
      <button type="submit" class="btn btn-danger">Generar Tablas</button>
     
 </form>
