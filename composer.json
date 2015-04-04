@@ -2,7 +2,7 @@
 	"name": "webcol/calima",
 	"description": "Framework PHP en español",
 	"type": "project",
-	"keywords": ["framework", "Php", "MVC", "oop"],
+	"keywords": ["framework", "Php", "MVC", "oop", "Framework en español"],
 	"homepage": "http://calimaframework.com",
 	"license": "MIT",
 	"authors": [
