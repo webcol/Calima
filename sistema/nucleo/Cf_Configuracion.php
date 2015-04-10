@@ -59,7 +59,7 @@ define('CF_AP_SLOGAN', 'Tu Framework php MVC hispano ');
 define('CF_AP_EMPRESA', 'www.webcol.net');
 
 /* Creditos de la aplicacion */
-define('CF_AP_CREDITOS', 'CopyLeft 2015 Debeloped by www.webcol.net');
+define('CF_AP_CREDITOS', 'Licencia MIT 2014 - 2015 Debeloped by www.webcol.net');
 
 #webcol seguridad
 
