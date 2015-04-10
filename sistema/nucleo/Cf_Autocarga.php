@@ -16,7 +16,7 @@
  * This software consists of voluntary contributions made by many individuals
  * and is licensed under the MIT license. For more information, see
  * @category   
- * @package    root
+ * @package    sistema/nucleo
  * @copyright  Copyright (c) 2006 - 2014 webcol.net (http://www.webcol.net/calima)
  * @license	https://github.com/webcol/Calima/blob/master/LICENSE	MIT
  * @version	##BETA 1.0##, ##2014 - 2015##
