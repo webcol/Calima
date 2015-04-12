@@ -5,6 +5,7 @@ Calima Framework  PHP Beta Vs 1.0
 
 
 Calima Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
+Si tienes deseos de ayudar en este proyecto recuerda que tu ayuda debe ser para esta version de Cf en español
 
 
 Cf  Trae embebido [Twitter bootstrap 3.3] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
