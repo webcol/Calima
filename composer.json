@@ -34,6 +34,9 @@
                 "itbz/fpdf": "1.*",
                 "doctrine/orm": "2.6.*@dev",
                 "phpoffice/phpexcel": "1.8.*",
+                "phpoffice/phpword": "0.12.*",
+                "phpoffice/phppowerpoint": "0.2.0",
+                "phpoffice/phpproject": "0.2.*",
                 "doctrine/cache": "1.4.*",
                 "smottt/wideimage": "dev-master",
                 "codeclimate/php-test-reporter": "0.1.*"
