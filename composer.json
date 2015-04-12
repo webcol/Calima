@@ -52,6 +52,6 @@
                  "psr-4": {
                     "nucleo\\": "sistemas/nucleo/"
                 }
-	},
-        "minimum-stability": "stable"
+	}
+        
 }
