@@ -1,8 +1,8 @@
 {
-	"name": "webcol/calimalite",
+	"name": "webcol/calima",
 	"description": "Framework PHP en español",
 	"type": "project",
-	"keywords": ["framework", "Php", "MVC", "oop", "Framework php hispano", "rasberry pi"],
+	"keywords": ["framework", "Php", "MVC", "oop", "Framework php hispano"],
 	"homepage": "http://calimaframework.com",
 	"license": "MIT",
 	"authors": [
