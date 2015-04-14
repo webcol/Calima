@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-SRC_DIR="`pwd`"
-cd "`dirname "$0"`"
-cd "../codeclimate/php-test-reporter/composer/bin"
-BIN_TARGET="`pwd`/test-reporter"
-cd "$SRC_DIR"
-"$BIN_TARGET" "$@"
