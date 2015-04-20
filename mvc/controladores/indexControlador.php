@@ -10,8 +10,8 @@ class indexControlador extends Cf_Controlador
     public function __construct() {
         parent::__construct();
         //Aqui cargamos libreria externa 
-        $this->cargaLib('PHPExcel');
-        $this->_exc = new PHPExcel;
+        //$this->cargaLib('PHPExcel');
+        //$this->_exc = new PHPExcel;
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
         $this->cargaAyudante('Cf_PHPAyuda');
