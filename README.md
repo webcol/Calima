@@ -1,8 +1,6 @@
 Calima Framework  PHP Beta Vs 1.0
  ===========================
- 
-+[![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-+
+
  <img src="http://www.calimaframework.com/public_/images/ascii_Cf.PNG"/>
 
 
@@ -13,6 +11,9 @@ Si tienes deseos de ayudar en este proyecto recuerda que tu ayuda debe ser para 
 Cf  Trae embebido [Twitter bootstrap 3.3] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
 buscamos una fácil instalación un código claro y limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
 
+ 
++[![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
++
 
 [![Latest Stable Version](https://poser.pugx.org/webcol/calima/v/stable.svg)](https://packagist.org/packages/webcol/calima) 
 [![Total Downloads](https://poser.pugx.org/webcol/calima/downloads.svg)](https://packagist.org/packages/webcol/calima) 
