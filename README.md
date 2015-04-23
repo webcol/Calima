@@ -1,7 +1,7 @@
 Calima Framework  PHP Beta Vs 1.0
- ===========================
+===========================
 
- <img src="http://www.calimaframework.com/public_/images/ascii_Cf.PNG"/>
+<img src="http://www.calimaframework.com/public_/images/ascii_Cf.PNG"/>
 
 
 Calima Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
