@@ -1,5 +1,12 @@
 <?php
 
+
+
+if (version_compare(PHP_VERSION, '5.3.20', '<'))
+{
+	die('Su Hosting tiene una versión < a PHP 5.3.20 debes actualizar para esta version de Calima. su version actual es: '.PHP_VERSION);
+}
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
