@@ -18,7 +18,7 @@ buscamos una fácil instalación un código claro y limpio en español, basado e
 
 
 
-[![Latest Stable Version](https://poser.pugx.org/webcol/calima/v/stable)](https://packagist.org/packages/webcol/calima) [![Total Downloads](https://poser.pugx.org/webcol/calima/downloads)](https://packagist.org/packages/webcol/calima) [![Latest Unstable Version](https://poser.pugx.org/webcol/calima/v/unstable)](https://packagist.org/packages/webcol/calima) [![License](https://poser.pugx.org/webcol/calima/license)](https://packagist.org/packages/webcol/calima)
+[![Latest Stable Version](https://poser.pugx.org/webcol/calima/v/stable)](https://packagist.org/packages/webcol/calima)  [![Latest Unstable Version](https://poser.pugx.org/webcol/calima/v/unstable)](https://packagist.org/packages/webcol/calima) [![License](https://poser.pugx.org/webcol/calima/license)](https://packagist.org/packages/webcol/calima)
 
 
 
