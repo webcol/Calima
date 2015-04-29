@@ -15,10 +15,12 @@ buscamos una fácil instalación un código claro y limpio en español, basado e
 +[![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 +
 
-[![Latest Stable Version](https://poser.pugx.org/webcol/calima/v/stable.svg)](https://packagist.org/packages/webcol/calima) 
-[![Total Downloads](https://poser.pugx.org/webcol/calima/downloads.svg)](https://packagist.org/packages/webcol/calima) 
-[![Latest Unstable Version](https://poser.pugx.org/webcol/calima/v/unstable.svg)](https://packagist.org/packages/webcol/calima) 
-[![License](https://poser.pugx.org/webcol/calima/license.svg)](https://packagist.org/packages/webcol/calima)
+
+
+
+[![Latest Stable Version](https://poser.pugx.org/webcol/calima/v/stable)](https://packagist.org/packages/webcol/calima) [![Total Downloads](https://poser.pugx.org/webcol/calima/downloads)](https://packagist.org/packages/webcol/calima) [![Latest Unstable Version](https://poser.pugx.org/webcol/calima/v/unstable)](https://packagist.org/packages/webcol/calima) [![License](https://poser.pugx.org/webcol/calima/license)](https://packagist.org/packages/webcol/calima)
+
+
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/webcol/Calima/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/webcol/Calima/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/webcol/Calima/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/webcol/Calima/?branch=master)
