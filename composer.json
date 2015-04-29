@@ -11,7 +11,14 @@
                         "name": "Efrain Restrepo",
                         "email": "efrasoft@outlook.com",
                         "homepage": "http://calimaframework.com/autores",
-                        "role": "Pionero"
+                        "role": "Pionero - Desarrollador"
+                },
+                 
+                {
+                        "name": "Ramon Serrano",
+                        "email": "ramon.calle.88@gmail.com",
+                        "homepage": "http://calimaframework.com/autores",
+                        "role": "Desarrollador - Nucleo"
                 },
 		{
 			"name": "Calimaframework Comunidad",
@@ -34,19 +41,22 @@
                 "itbz/fpdf": "1.*",
                 "doctrine/orm": "2.6.*@dev",
                 "phpoffice/phpexcel": "1.8.*",                
-                "smottt/wideimage": "dev-master"
+                "smottt/wideimage": "dev-master",
+                "vrana/notorm": "dev-master"
                 
 	},
          
         
 	"autoload": {
 		"classmap" : [
-			"sistema/ayudantes/",
-			"sistema/librerias/",
-			"sistema/nucleo/"
+			"Sistema/Ayudantes/",
+			"Sistema/Librerias/"
+			
 		],
                  "psr-4": {
-                    "nucleo\\": "sistemas/nucleo/"
+                    
+                    "Sistema\\Nucleo\\": "Calima/Sistema/Nucleo/"
+
                 }
 	}
         
