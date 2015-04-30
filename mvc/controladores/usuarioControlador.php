@@ -34,7 +34,7 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
     
     public function crearRegistro(){
         $datas = $this->cargaModelo('usuario');    
-        if(isset($_POST['accept'])){
+        if(isset($_POST['nombre'])){
         $nombre=$_POST['nombre'];
         $email=$_POST['email'];
         $usuario=$_POST['nombre'];
@@ -46,8 +46,11 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
                      '1',
                      $clave
                     );
-                $this->_ayuda->redireccionUrl('usuario/registro');
+                $this->_ayuda->redireccionUrl('usuario');
                 //$_POST['option1']=false;
+        }
+        else{
+            $this->_ayuda->redireccionUrl('usuario/registro');
         }
     }
     

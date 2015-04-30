@@ -1,7 +1,7 @@
  <!-- Site footer -->
         <div id="footer">
  
-            <center><?php echo CF_AP_CREDITOS; ?></center>
+            <div class="footer"> <?php echo CF_AP_CREDITOS;  ?> --- Theme Inspinia </div>
             
        </div>
       

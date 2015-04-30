@@ -1,5 +1,6 @@
 <?php
-class usuarioModelo extends Cf_Modelo{
+class usuarioModelo extends Sistema\Nucleo\CFModelo
+{
     
     function ValidarUsuario($email,$password){          //  Consulta Mysql para buscar en la tabla Usuario aquellos usuarios que coincidan con el mail y password ingresados en pantalla de login
         $query = $this->db->where('Usuario',$email);  //  La consulta se efectúa mediante Active Record. Una manera alternativa, y en lenguaje más sencillo, de generar las consultas Sql.

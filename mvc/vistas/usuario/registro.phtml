@@ -1,64 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+
+<head>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="<?PHP ECHO Cf_BASE_URL ?>/public_/img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Cf | Register</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/animate.css" rel="stylesheet">
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/style.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/css/signin.css" rel="stylesheet">
+</head>
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="<?PHP ECHO Cf_BASE_URL ?>/public_/js/ie-emulation-modes-warning.js"></script>
+<body class="gray-bg">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="container">
-
-        <form method="post" action="<?PHP ECHO Cf_BASE_URL ?>usuario/crearRegistro" class="form-horizontal">
-        <h2 class="form-signin-heading">Registro</h2>
-        <label for="inputEmail" class="sr-only">Nombre</label>
-        <input name="nombre" type="text" class="form-control" id="name" placeholder="Nombre" required>
-        <label for="inputEmail" class="sr-only">Apellido</label>
-        <input name="apellido" type="text" class="form-control" id="apellido" placeholder="Apellido" required>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input name="email" type="text" class="form-control" id="email" placeholder="Email" required>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input name="clave"  type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button type="submit" class="btn btn-danger">Sign in</button>
-	<button type="reset" class="btn btn-default">Reset</button>
+    <div class="middle-box text-center loginscreen   animated fadeInDown">
         <div>
-        <div class="widget-foot">
-                 Already Registred? <a href="<?PHP ECHO Cf_BASE_URL ?>usuario">Login</a>
+            <div>
+
+                <h1 class="logo-name">Cf</h1>
+
+            </div>
+            <h3>Registro de usuarios</h3>
+            <p>Registrate esperamos por ti.</p>
+            <form method="post" action="<?PHP ECHO Cf_BASE_URL ?>usuario/crearRegistro" class="m-t" role="form" >
+                <div class="form-group">
+                    <input name="nombre" type="text" class="form-control" placeholder="Nombre" required="">
                 </div>
+                <div class="form-group">
+                    <input name="email" type="email" class="form-control" placeholder="Email" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required="">
+                </div>
+                <div class="form-group">
+                        <div class="checkbox i-checks"><label> <input type="checkbox"><i></i> Acepto los terminos y condiciones </label></div>
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Registro</button>
+
+                <p class="text-muted text-center"><small>Ya tienes una cuenta?</small></p>
+                <a class="btn btn-sm btn-white btn-block" href="<?PHP ECHO Cf_BASE_URL ?>usuario/login">Login</a>
+            </form>
+            
         </div>
-      </form>
+    </div>
 
-    </div> <!-- /container -->
+    <!-- Mainly scripts -->
+    <script src="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/js/jquery-2.1.1.js"></script>
+    <script src="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+</body>
 
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="<?PHP ECHO Cf_BASE_URL ?>/public_/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
 </html>
