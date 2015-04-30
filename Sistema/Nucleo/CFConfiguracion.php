@@ -68,7 +68,7 @@ define('CF_PATH_DATA', dirname(__FILE__) . '/Cf-data');
 define('Cf_BASE_URL', 'http://localhost/Calima/');
 
 /* definimos un controlador inicial en nuestro proyecto */
-define('CONTROLADOR_INICIAL', 'index');
+define('CONTROLADOR_INICIAL', 'instalador');
 
 /* Sedefine una CONSTANTE al directorio adicionales en la vista */
 define('ADICIONALES_VISTA', 'adicionales');
@@ -96,9 +96,9 @@ define('Cf_CSRF_SECRET','Cfbeta');
 /* #base de datos */
 
 /* Configuracion de tu base de datos */
-define('CF_BD_HOST', 'localhost');
-define('CF_BD_NOMBRE', 'calima');
-define('CF_BD_USUARIO', 'cali');
-define('CF_BD_CLAVE', '654321aa');
-define('CF_BD_CHAR', 'utf8');
-define('CF_BD_CONECTOR', 'mysql');
+define('CF_BD_HOST', '');
+define('CF_BD_NOMBRE', '');
+define('CF_BD_USUARIO', '');
+define('CF_BD_CLAVE', '');
+define('CF_BD_CHAR', '');
+define('CF_BD_CONECTOR', '');
