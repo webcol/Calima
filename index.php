@@ -23,6 +23,11 @@
  * <http://www.calimaframework.com>.
  */
 
+require_once __DIR__.'/vendor/autoload.php';
+
+use Sistema\Nucleo;
+use Sistema\Ayudantes;
+//use mvc\controladores;
 
 
 /** Cf directorio separador */
@@ -33,7 +38,7 @@ defined('SITE_ROOT')? null: define('SITE_ROOT', realpath(dirname(__FILE__)).DS);
 defined('SITE_PATH') ? NULL : define ('SITE_PATH', realpath(dirname(__FILE__) . DS . '..' . DS) . DS);
 
 /** Cf definimos constante Ruta directa al nucleo de framework  */
-define('RUTA_NUCLEO', SITE_ROOT . 'sistema'.DS.'nucleo' . DS);
+define('RUTA_NUCLEO', SITE_ROOT . 'Sistema'.DS.'Nucleo' . DS);
 
 # define para mvc erp
 
@@ -53,9 +58,9 @@ define('IMG_PATH', SITE_ROOT . 'public_'.DS.'img' . DS);
 /** Cf definimos constante  directa a los js dentro del directorio public_ del framework  */
 define('JS_PATH', SITE_ROOT . 'public_'.DS.'js' . DS);
 /** Cf definimos constante  directa a las librerias dentro  del framework  */
-define('RUTA_LIBS', SITE_ROOT . 'sistema'.DS.'librerias' . DS);
+define('RUTA_LIBS', SITE_ROOT . 'Sistema'.DS.'librerias' . DS);
 /** Cf definimos constante  directa a los ayudantes del framework  */
-define('RUTA_AYUDANTES', SITE_ROOT . 'sistema'.DS.'ayudantes' . DS);
+define('RUTA_AYUDANTES', SITE_ROOT . 'Sistema'.DS.'ayudantes' . DS);
 
 #Firewall desactivado
 
@@ -65,14 +70,21 @@ if ( is_file( @dirname(__FILE__).'RUTA_LIBS'.DS.'php-firewall'.DS.'firewall.php'
 	include_once( @dirname(__FILE__).'RUTA_LIBS'.DS.'php-firewall'.DS.'firewall.php' );*/
 
 # Cargamos la autocarga dinamica y configuraciones
-require_once RUTA_NUCLEO . 'Cf_Autocarga.php';
-require_once RUTA_NUCLEO . 'Cf_Configuracion.php';
-
-
+//require_once RUTA_NUCLEO . 'Cf_Autocarga.php';
+require_once RUTA_NUCLEO . 'CFConfiguracion.php';
 
 try{
-  Cf_Bootstrap::actuar(new Cf_Solicitud);
-}
-catch(Exception $e){
+   
+    Nucleo\CFBootstrap::actuar(new Nucleo\CFSolicitud);
+    //CFBootstrap::actuar(new CFSolicitud);
+   
+} catch (Exception $e) {
     echo $e->getMessage();
 }
+
+/*try{
+  CfBootstrap::actuar(new Cf_Solicitud);
+}
+catch(Exception $e){
+   
+}*/

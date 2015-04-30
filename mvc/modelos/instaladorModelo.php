@@ -1,17 +1,14 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+use Sistema\Nucleo as Sisnuc;
 
 /**
  * Description of instaladorModelo
  *
  * @author webcol
  */
-class instaladorModelo extends Cf_Modelo{
+class instaladorModelo extends Sisnuc\CFModelo
+{
     //put your code here
     public function __construct() {
         parent::__construct();

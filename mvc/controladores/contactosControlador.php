@@ -1,6 +1,6 @@
 <?php
 
-class contactosControlador extends Cf_Controlador
+class contactosControlador extends \Sistema\Nucleo\CFControlador
 {
     
     private $_ayuda;
@@ -9,8 +9,8 @@ class contactosControlador extends Cf_Controlador
         parent::__construct();
         
         // cargamos la clase ayudantes para usar sus metodos de ayuda
-        $this->cargaAyudante('Cf_PHPAyuda');
-        $this->_ayuda= new Cf_PHPAyuda;
+       
+        $this->_ayuda= new Sistema\Ayudantes\CFPHPAyuda();
     }
     
     public function index()

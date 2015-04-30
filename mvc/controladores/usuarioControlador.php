@@ -1,5 +1,7 @@
 <?php
-class usuarioControlador extends Cf_Controlador
+
+
+class usuarioControlador extends \Sistema\Nucleo\CFControlador
 {
     private $_ayuda;
     private $_seg;
@@ -7,12 +9,10 @@ class usuarioControlador extends Cf_Controlador
     public function __construct() {
         parent::__construct();
                
-        // cargamos la clase ayudantes para usar sus metodos de ayuda
-        $this->cargaAyudante('Cf_PHPAyuda');
-        $this->_ayuda= new Cf_PHPAyuda;
-        $this->cargaAyudante('Cf_PHPSeguridad');
-        $this->_seg= new Cf_PHPSeguridad;
-        $this->_sesion=new Cf_Sesion();        
+        // cargamos la clase ayudantes para usar sus metodos de ayuda       
+        $this->_ayuda= new Sistema\Ayudantes\CFPHPAyuda;        
+        $this->_seg= new Sistema\Ayudantes\CFPHPSeguridad;
+        $this->_sesion=new Sistema\Nucleo\CFSesion();       
     }    
     
     public function index(){        

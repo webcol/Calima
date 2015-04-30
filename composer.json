@@ -2,6 +2,7 @@
 	"name": "webcol/calima",
 	"description": "Framework PHP en español",
 	"type": "project",
+        "version": "1.0.2",
 	"keywords": ["framework", "Php", "MVC", "oop", "Framework php hispano"],
 	"homepage": "http://calimaframework.com",
 	"license": "MIT",
@@ -37,7 +38,7 @@
 	],
 	"require": {
 		"php": ">=5.3.0",
-                "phpmailer/phpmailer": "5.*",
+                "symfony/swiftmailer-bundle": "2.3.*@dev",
                 "itbz/fpdf": "1.*",
                 "doctrine/orm": "2.6.*@dev",
                 "phpoffice/phpexcel": "1.8.*",                
@@ -55,7 +56,10 @@
 		],
                  "psr-4": {
                     
-                    "Sistema\\Nucleo\\": "Calima/Sistema/Nucleo/"
+                    "Sistema\\Nucleo\\": "Sistema/Nucleo",
+                    "Sistema\\Ayudantes\\": "Sistema/Ayudantes",
+                    "Sistema\\Librerias\\": "Sistema/Librerias"
+                    
 
                 }
 	}

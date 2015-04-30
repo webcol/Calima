@@ -6,7 +6,8 @@
  * and open the template in the editor.
  */
 
-class blogModelo extends Cf_Modelo {
+class blogModelo extends Sistema\Nucleo\CFModelo
+{
     
     public function __construct() {
         parent::__construct();
