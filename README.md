@@ -82,12 +82,12 @@ DONACIONES
 CONTACTOS
 -----------------
 
-http://calimaframework.com/
-soporte@calimaframework.com/
-info@calimaframework.com/
-https://twitter.com/calimaframework
-https://www.facebook.com/calimaframework
-http://www.meetup.com/CalimaFramework/members/
+http://calimaframework.com/ <br>
+soporte@calimaframework.com/ <br>
+info@calimaframework.com/ <br>
+https://twitter.com/calimaframework <br>
+https://www.facebook.com/calimaframework <br>
+http://www.meetup.com/CalimaFramework/members/ <br>
 
 
 <img src="http://www.calimaframework.com/public_/images/Cf.PNG"/>
@@ -95,5 +95,5 @@ http://www.meetup.com/CalimaFramework/members/
 Licencia
 -----------------
 
-Calima framework Cf es software openSourced licenciado bajo [Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
+Calima framework Cf es software openSourced bajo [Licencia Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
 
