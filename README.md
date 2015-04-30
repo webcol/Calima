@@ -89,6 +89,9 @@ https://twitter.com/calimaframework
 https://www.facebook.com/calimaframework
 http://www.meetup.com/CalimaFramework/members/
 
+
+<img src="http://www.calimaframework.com/public_/images/cf.PNG"/>
+
 Licencia
 -----------------
 
