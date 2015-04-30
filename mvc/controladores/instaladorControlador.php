@@ -100,7 +100,7 @@ class instaladorControlador extends Sisnuc\CFControlador
                
         //$this->crearBaseDatos($_POST['hostbd'],$_POST['nombrebd'],$_POST['usuariobd'],$_POST['clavebd']);
         //Cf_Configuracion.php
-        $file = fopen(RUTA_NUCLEO."Cf_Configuracion.php", "w");
+        $file = fopen(RUTA_NUCLEO."CFConfiguracion.php", "w");
         
         fwrite($file, "<?php " . PHP_EOL.PHP_EOL);
         
