@@ -101,4 +101,4 @@ define('CF_BD_NOMBRE', '');
 define('CF_BD_USUARIO', '');
 define('CF_BD_CLAVE', '');
 define('CF_BD_CHAR', '');
-define('CF_BD_CONECTOR', '');
+define('CF_BD_CONECTOR', 'mysql');
