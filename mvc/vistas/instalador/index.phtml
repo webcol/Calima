@@ -13,10 +13,17 @@
     <title>Justified Nav Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="<?PHP ECHO Cf_BASE_URL ?>public_/css/bootstrap.css" rel="stylesheet">
+   <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="../layout/default/css/justified-nav.css" rel="stylesheet">
+    <!-- Toastr style -->
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/animate.css" rel="stylesheet">
+    <link href="<?PHP ECHO Cf_BASE_URL ?>/public_/inspinia/css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -50,6 +57,38 @@
         <div class="alert alert-danger" role="alert"><?php echo $_GET['error']; ?></div>
       <?php } ?>
       <!-- Example row of columns -->
+      
+      
+      
+      <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Instalador <small>Configuración de base de datos.</small></h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+      
+      
+      
+      
+      
       <form method="post" action="instalador/verificarBd"  class="form-horizontal">
     <div class="form-group has-success">
         <label class="col-xs-2 control-label" for="inputSuccess">Usuario</label>
@@ -112,6 +151,16 @@
      <button type="submit" class="btn btn-danger">Generar Tablas</button>
     
 </form>
+      
+      
+      
+      </div>
+                    </div>
+                </div>
+            </div>
+      
+      
+      
 
       <!-- Site footer -->
      
