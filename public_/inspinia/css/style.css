@@ -2904,6 +2904,17 @@ ol.unstyled {
   border-top: 1px solid #e7eaec;
   margin-left: 220px;
 }
+.footer.fixedCf {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 10px 20px;
+  background: white;
+  border-top: 1px solid #e7eaec;
+  margin-left: 0px;
+}
 body.mini-navbar .footer.fixed,
 body.body-small.mini-navbar .footer.fixed {
   margin: 0 0 0 70px;
@@ -3655,13 +3666,13 @@ body.modal-open {
   height: 400px;
   width: 400px;
   position: absolute;
-  top: 50%;
+  top: 50%;  
   left: 50%;
   margin-top: -250px;
   margin-left: -200px;
   z-index: 100;
 }
-.footer {
+.footerCf {
    position:fixed;
    left:0px;
    bottom:0px;
