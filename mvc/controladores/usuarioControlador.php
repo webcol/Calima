@@ -38,7 +38,7 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
         $nombre=$_POST['nombre'];
         $email=$_POST['email'];
         $usuario=$_POST['nombre'];
-        $clave=$this->_seg->cifrado($this->_seg->filtrarTexto($_POST['clave']));
+         $clave=$this->_seg->cifrado($this->_seg->filtrarTexto($_POST['clave']));
         
          $datas->insertarRegistro(
                      $this->_seg->filtrarTexto($_POST['nombre']),
@@ -57,16 +57,17 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
     public function valida(){
         if(isset($_POST['usuario'])){
         $usuario=$_POST['usuario'];
-        $clave=$this->_seg->cifrado($this->_seg->filtrarTexto($_POST['clave']));
+        echo $clave=$this->_seg->cifrado($this->_seg->filtrarTexto($_POST['clave']));
         
         $datosUser = $this->cargaModelo('usuario');
-        $valida=$datosUser->seleccionUsuario($usuario, $clave);        
-        if($valida){
+        $valida=$datosUser->seleccionUsuario($usuario, $clave);  
+        
+        if(isset($valida)){
             $this->_sesion->iniciarSesion('_s', false);
             $_SESSION['usuario']=$usuario;
-            $this->_ayuda->redireccionUrl('');          
+            $this->_ayuda->redireccionUrl('index');         
         }
-        $this->_ayuda->redireccionUrl('usuario');
+       $this->_ayuda->redireccionUrl('usuario');
         
         }
     }
