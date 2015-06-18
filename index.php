@@ -29,6 +29,15 @@ use Sistema\Nucleo;
 use Sistema\Ayudantes;
 //use mvc\controladores;
 
+//lenguaje
+
+/*session_start();
+$sesion=new Sistema\Nucleo\CFSesion();
+$sesion->iniciarSesion('_s', false);
+header('Cache-control: private'); // IE 6 FIX
+ */
+
+
 
 /** Cf directorio separador */
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
@@ -61,6 +70,72 @@ define('JS_PATH', SITE_ROOT . 'public_'.DS.'js' . DS);
 define('RUTA_LIBS', SITE_ROOT . 'Sistema'.DS.'librerias' . DS);
 /** Cf definimos constante  directa a los ayudantes del framework  */
 define('RUTA_AYUDANTES', SITE_ROOT . 'Sistema'.DS.'ayudantes' . DS);
+
+/** Cf definimos constante  directa a los lenguajes del framework  */
+define('RUTA_LENGUAJES', SITE_ROOT . 'Sistema'.DS.'lenguajes' . DS);
+
+
+//LENGUAJES
+//En el directorio sistema lenguajes hay varios archivos php cada uno para crear las constantes en el idioma especifico
+//luego por get capturamos la variable lan al inicio de la aplicacion asi: www.tuapp.com/?lang=de
+
+if(isSet($_GET['lang']))
+{
+    $lang = $_GET['lang'];
+ 
+// register the session and set the cookie
+    $_SESSION['lang'] = $lang;
+ 
+    setcookie('lang', $lang, time() + (3600 * 24 * 30));
+}
+else if(isSet($_SESSION['lang']))
+{
+    $lang = $_SESSION['lang'];
+}
+else if(isSet($_COOKIE['lang']))
+{
+    $lang = $_COOKIE['lang'];
+}
+else
+{
+    $lang = 'es'; // por defecto el idioma para el app es español puede ser en, bt, de, zh
+}
+ 
+switch ($lang) {
+  case 'en':
+  $lang_file = 'lang.en.php';
+  break;
+ 
+  case 'de':
+  $lang_file = 'lang.de.php';
+  break;
+
+  case 'zh':
+  $lang_file = 'lang.zh.php';
+  break;
+
+  case 'pt':
+  $lang_file = 'lang.pt.php';
+  break;
+
+  case 'pt':
+  $lang_file = 'lang.pt.php';
+  break;
+
+  case 'es':
+  $lang_file = 'lang.es.php';
+  break;
+ 
+  default:
+  $lang_file = 'lang.en.php';
+ 
+}
+ 
+include_once RUTA_LENGUAJES . $lang_file;
+
+//FIN LENGUAJES
+
+
 
 #Firewall desactivado
 
