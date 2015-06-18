@@ -1,5 +1,4 @@
 <?php
-
 /*
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
@@ -22,9 +21,6 @@
  * @version	##BETA 1.0##, ##2014 - 2015##
  * <http://www.calimaframework.com>.
  */
-
-namespace Sistema\Nucleo;
-
 /*
  * require('Cf_Sesion.php');
  * $sesion=new Cf_Sesion();
@@ -34,33 +30,20 @@ namespace Sistema\Nucleo;
  * $_SESSION['something']='A value.';
  * echo$_SESSION['something'];
  */
-
+namespace Sistema\Nucleo;
 class CFSesion
-{
-        
-   private $host      = CF_BD_HOST;
-   private $usuario      = CF_BD_USUARIO;
-   private $clave      = CF_BD_CLAVE;
-   private $bdnombre    = CF_BD_NOMBRE;
-   private $bdchar    = CF_BD_CHAR;
-   private $bdconector    = CF_BD_CONECTOR;
-
-   private $stmt;
-   private $dbh;
-   private $error;
-   protected $db;
-    
-    
-    
-   function __construct() {
-      // set our custom session functions.
+{   
+   public function __construct() {
+       session_regenerate_id(true);
+         // set our custom session functions.
       session_set_save_handler(array($this, 'abrir'), array($this, 'cerrar'), array($this, 'leer'), array($this, 'escribir'), array($this, 'destruir'), array($this, 'gc'));
-
       // This line prevents unexpected effects when using objects as save handlers.
-      register_shutdown_function('session_write_close');
-   }
-
-   function iniciarSesion($session_name, $secure) {
+      register_shutdown_function('session_write_close');      
+   }   
+  /* public function __destruct() {
+      session_regenerate_id(true);
+   }*/
+           function iniciarSesion($session_name, $secure) {
       // Make sure the session cookie is not accessable via javascript.
       $httpunico = true;
 
@@ -86,39 +69,43 @@ class CFSesion
       // Change the session name 
       session_name($session_name);
       // Now we cat start the session
-      @session_start();
-      ob_start();
+      session_start();
+     
       // This line regenerates the session and delete the old one. 
       // It also generates a new encryption key in the database. 
-      session_regenerate_id(true); 
+       
    }
 
-
+// ingrese la informacion de conexion a su base de datos, debe ser igual a la que esta en CFConfiguracion.php
    function abrir() {
-     
-      $mysqli = new mysqli($this->host, $this->usuario, $this->clave, $this->bdnombre);
-      $this->dbh = $mysqli;
-      return true;
+   $host = "localhost";
+   $user = "";
+   $pass = "";
+   $name = "";
+   
+   $mysqli = new \mysqli($host, $user, $pass, $name);
+   $this->db = $mysqli;
+   return true;
    }
 
    function cerrar() {
-      $this->dbh->close();
+      $this->db->close();
       return true;
    }
 
 
    function leer($id) {
       if(!isset($this->read_stmt)) {
-         $this->read_stmt = $this->dbh->prepare("SELECT data FROM sesiones WHERE id = ? LIMIT 1");
-      }
-      $this->read_stmt->bind_param('s', $id);
-      $this->read_stmt->execute();
-      $this->read_stmt->store_result();
-      $this->read_stmt->bind_result($data);
-      $this->read_stmt->fetch();
-      $key = $this->getkey($id);
-      $data = $this->decrypt($data, $key);
-      return $data;
+      $this->read_stmt = $this->db->prepare("SELECT data FROM sesiones WHERE id = ? LIMIT 1");
+   }
+   $this->read_stmt->bind_param('s', $id);
+   $this->read_stmt->execute();
+   $this->read_stmt->store_result();
+   $this->read_stmt->bind_result($data);
+   $this->read_stmt->fetch();
+   $key = $this->getkey($id);
+   $data = $this->decrypt($data, $key);
+   return $data;
    }
 
 
@@ -127,54 +114,56 @@ class CFSesion
 
    function escribir($id, $data) {
       // Get unique key
-      $key = $this->getkey($id);
-      // Encrypt the data
-      $data = $this->encrypt($data, $key);
-    
-      $time = time();
-      if(!isset($this->w_stmt)) {
-         $this->w_stmt = $this->dbh->prepare("REPLACE INTO sesiones (id, set_time, data, session_key) VALUES (?, ?, ?, ?)");
-      }
-    
-      $this->w_stmt->bind_param('siss', $id, $time, $data, $key);
-      $this->w_stmt->execute();
-      return true;
+   $key = $this->getkey($id);
+   // Encrypt the data
+   $data = $this->encrypt($data, $key);
+ 
+   $time = time();
+   if(!isset($this->w_stmt)) {
+      $this->w_stmt = $this->db->prepare("REPLACE INTO sesiones (id, set_time, data, session_key) VALUES (?, ?, ?, ?)");
+   }
+ 
+   $this->w_stmt->bind_param('siss', $id, $time, $data, $key);
+   $this->w_stmt->execute();
+   return true;
    }
 
    function destruir($id) {
       if(!isset($this->delete_stmt)) {
-         $this->delete_stmt = $this->dbh->prepare("DELETE FROM sesiones WHERE id = ?");
-      }
-      $this->delete_stmt->bind_param('s', $id);
-      $this->delete_stmt->execute();
-      return true;
+      $this->delete_stmt = $this->db->prepare("DELETE FROM sesiones WHERE id = ?");
+   }
+   $this->delete_stmt->bind_param('s', $id);
+   $this->delete_stmt->execute();
+   return true;
    }
 
    function gc($max) {
       if(!isset($this->gc_stmt)) {
-         $this->gc_stmt = $this->dbh->prepare("DELETE FROM sesiones WHERE set_time < ?");
-      }
-      $old = time() - $max;
-      $this->gc_stmt->bind_param('s', $old);
-      $this->gc_stmt->execute();
-      return true;
+      $this->gc_stmt = $this->db->prepare("DELETE FROM sesiones WHERE set_time < ?");
+   }
+   $old = time() - $max;
+   $this->gc_stmt->bind_param('s', $old);
+   $this->gc_stmt->execute();
+   return true;
    }
 
    private function getkey($id) {
+           
+      
       if(!isset($this->key_stmt)) {
-         $this->key_stmt = $this->dbh->prepare("SELECT session_key FROM sesiones WHERE id = ? LIMIT 1");
-      }
-      $this->key_stmt->bind_param('s', $id);
-      $this->key_stmt->execute();
-      $this->key_stmt->store_result();
-      if($this->key_stmt->num_rows == 1) { 
-         $this->key_stmt->bind_result($key);
-         $this->key_stmt->fetch();
-         return $key;
-      } else {
-         $random_key = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
-         return $random_key;
-      }
+      $this->key_stmt = $this->db->prepare("SELECT session_key FROM sesiones WHERE id = ? LIMIT 1");
+   }
+   $this->key_stmt->bind_param('s', $id);
+   $this->key_stmt->execute();
+   $this->key_stmt->store_result();
+   if($this->key_stmt->num_rows == 1) { 
+      $this->key_stmt->bind_result($key);
+      $this->key_stmt->fetch();
+      return $key;
+   } else {
+      $random_key = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));
+      return $random_key;
+   }
    }
 
    private function encrypt($data, $key) {

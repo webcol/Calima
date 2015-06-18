@@ -96,9 +96,9 @@ define('Cf_CSRF_SECRET','Cfbeta');
 /* #base de datos */
 
 /* Configuracion de tu base de datos */
-define('CF_BD_HOST', '');
-define('CF_BD_NOMBRE', '');
-define('CF_BD_USUARIO', '');
-define('CF_BD_CLAVE', '');
-define('CF_BD_CHAR', '');
+define('CF_BD_HOST', 'localhost');
+define('CF_BD_NOMBRE', 'prueba_cf');
+define('CF_BD_USUARIO', 'prueba');
+define('CF_BD_CLAVE', '654321aa');
+define('CF_BD_CHAR', 'utf8');
 define('CF_BD_CONECTOR', 'mysql');
