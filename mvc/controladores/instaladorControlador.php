@@ -19,7 +19,7 @@
  * @package    sistema/nucleo
  * @copyright  Copyright (c) 2006 - 2014 webcol.net (http://www.webcol.net/calima)
  * @license	https://github.com/webcol/Calima/blob/master/LICENSE	MIT
- * @version	##BETA 1.0##, ##2014 - 2015##
+ * @version	##BETA 1.1##, ##2014 - 2015##
  * <http://www.calimaframework.com>.
  */
 //namespace mvc\controladores;
@@ -47,7 +47,7 @@ class instaladorControlador extends Sisnuc\CFControlador
         parent::__construct();
        $this->_basedatos=$this->cargaModelo('instalador'); 
         
-        $this->_ayuda= new Sisayu\CfPHPAyuda;
+        $this->_ayuda= new Sisayu\CFPHPAyuda;
     }
     
     public function index(){
