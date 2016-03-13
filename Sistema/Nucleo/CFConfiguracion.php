@@ -25,7 +25,7 @@
 
 
 /* inicio la configuracion*/
-define('Cf_CONFIG_INICIO', 'true');
+define('Cf_CONFIG_INICIO', 'false');
 
 /* Defino zona horaria*/
 date_default_timezone_set('America/Bogota');
@@ -83,7 +83,7 @@ define('CF_AP_SLOGAN', 'Tu Framework php MVC hispano ');
 define('CF_AP_EMPRESA', 'www.webcol.net');
 
 /* Creditos de la aplicacion */
-define('CF_AP_CREDITOS', 'Licencia MIT 2014 - 2015 Debeloped by www.webcol.net');
+define('CF_AP_CREDITOS', 'Licencia MIT 2014 - 2016 Debeloped by www.webcol.net');
 
 #webcol seguridad
 
