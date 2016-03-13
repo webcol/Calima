@@ -87,20 +87,21 @@ define('CF_AP_CREDITOS', 'Licencia MIT 2014 - 2016 Debeloped by www.webcol.net')
 
 #webcol seguridad
 
-/* Definimos un indice de clave para concatenar en encriptacion de datos */
+/* Definimos un indice de clave para concatenar en encriptacion de datos cambie por su seguridad */
 define('Cf_KEY_MD5', 'P0L1');
 
-/*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de Cf_PHPSeguridad */
+/*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de Cf_PHPSeguridad Cambie por seguridad*/
 define('Cf_CSRF_SECRET','Cfbeta');
 
+/*Si usted va a utilizar SSL debe de cambiar a true */
 define('Cf_SESION_PARAMETRO_SEGURO','false');
 
 /* #base de datos */
 
 /* Configuracion de tu base de datos */
 define('CF_BD_HOST', 'localhost');
-define('CF_BD_NOMBRE', 'calima');
-define('CF_BD_USUARIO', 'calima');
-define('CF_BD_CLAVE', '654321');
+define('CF_BD_NOMBRE', '');
+define('CF_BD_USUARIO', '');
+define('CF_BD_CLAVE', '');
 define('CF_BD_CHAR', 'utf8');
 define('CF_BD_CONECTOR', 'mysql');
