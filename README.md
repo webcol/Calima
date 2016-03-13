@@ -1,4 +1,4 @@
-Calima Framework  PHP Beta Vs 1.0
+Calima Framework  PHP  Vs 1.1.5
 ===========================
 
 [![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -7,11 +7,11 @@ Calima Framework  PHP Beta Vs 1.0
 
 
 Calima Framework agradece a la comunidad que de alguna manera desea dar apoyo a este proyecto.
-Si tienes deseos de ayudar en este proyecto recuerda que tu ayuda debe ser para esta version de Cf en español
+Si tienes deseos de ayudar recuerda que tu ayuda debe ser para esta version de Cf en español.
 
 
-Cf  Trae embebido [Twitter bootstrap 3.3] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
-buscamos una fácil instalación un código claro y limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
+Cf  Trae embebido [Twitter bootstrap 3.3.6] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
+buscamos una fácil instalación un código claro, limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
 
  
 +[![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -36,27 +36,27 @@ ESTRUCTURA DE DIRECTORIOS
 
 ```
 mvc/                    implementa el modelo vista controlador
-public_/                archivos y direcrectorios publicos css, js, imagenes
-respaldos/              respaldos de la aplicacion
-sistema/                ayudantes, librerias, servicios, nucleo
-temporal/               informacion temporal 
+public_/                archivos y direcrectorios p�blicos css, js, im�genes
+ejemplo_bd/             Ejemplo de la bsase de datos .sql
+sistema/                ayudantes, librer�as, servicios, n�cleo
+temporal/               informaci�n temporal 
 ```
 
 
 DOCUMENTACION
--------------
+-----------------
 
 Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y 
  [Guía de ayuda](http://www.calimaframework.com/blog/) sigue cada página de ayuda y termina sus ejemplos.
 
 
 
-REQUERIMIENTOS
-------------
+REQUERIMIENTOS MINIMOS
+-------------------------
 
-PHP 5.3.
-Apache 2.2
-Mysql 5.2
+PHP 5.3.+
+Apache 2.2.+
+Mysql 5.2.+
 
 Multiplataforma
 
@@ -80,6 +80,13 @@ Tu puede colaborar con:
 
 DONACIONES
 -----------------
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="8PCLCKFPLYJUQ">
+<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+
 
 CONTACTOS
 -----------------
