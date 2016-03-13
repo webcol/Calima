@@ -33,6 +33,14 @@
 namespace Sistema\Nucleo;
 class CFSesion
 {   
+    
+    private $host       = CF_BD_HOST;
+    private $usuario    = CF_BD_USUARIO;
+    private $clave      = CF_BD_CLAVE;
+    private $bdnombre   = CF_BD_NOMBRE;
+    private $bdchar     = CF_BD_CHAR;
+    private $bdconector = CF_BD_CONECTOR;
+    
    public function __construct() {
        session_regenerate_id(true);
          // set our custom session functions.
@@ -78,10 +86,10 @@ class CFSesion
 
 // ingrese la informacion de conexion a su base de datos, debe ser igual a la que esta en CFConfiguracion.php
    function abrir() {
-   $host = "localhost";
-   $user = "";
-   $pass = "";
-   $name = "";
+   $host = $this->host;
+   $user = $this->usuario;
+   $pass = $this->clave;
+   $name = $this->bdnombree;
    
    $mysqli = new \mysqli($host, $user, $pass, $name);
    $this->db = $mysqli;
