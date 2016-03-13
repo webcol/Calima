@@ -93,6 +93,8 @@ define('Cf_KEY_MD5', 'P0L1');
 /*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de Cf_PHPSeguridad */
 define('Cf_CSRF_SECRET','Cfbeta');
 
+define('Cf_SESION_PARAMETRO_SEGURO','false');
+
 /* #base de datos */
 
 /* Configuracion de tu base de datos */

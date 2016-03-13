@@ -15,21 +15,18 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
         $this->_sesion=new Sistema\Nucleo\CFSesion();       
     }    
     
-    public function index(){        
+    public function index(){     
+        $this->_sesion->iniciarSesion('_s', Cf_SESION_PARAMETRO_SEGURO);
+        session_destroy();
         $this->_vista->titulo = 'CalimaFramework Login';
         $this->_vista->error = 'CalimaFramework Login';
-        $this->_vista->imprimirVista('index', 'usuario');  
-        
-        
+        $this->_vista->imprimirVista('index', 'usuario');
     }  
     
     public function registro(){ 
-        
         $this->_vista->titulo = 'CalimaFramework registro';
         $this->_vista->imprimirVista('registro', 'usuario');
         
-        //$this->_sesion->iniciarSesion('_s', false);
-        //echo$_SESSION['something'];
     }
     
     public function crearRegistro(){
@@ -46,8 +43,7 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
                      '1',
                      $clave
                     );
-                $this->_ayuda->redireccionUrl('usuario');
-                //$_POST['option1']=false;
+                $this->_ayuda->redireccionUrl('usuario');       
         }
         else{
             $this->_ayuda->redireccionUrl('usuario/registro');
@@ -63,9 +59,11 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
         $valida=$datosUser->seleccionUsuario($usuario, $clave);  
         
         if(isset($valida)){
-            $this->_sesion->iniciarSesion('_s', false);
-            $_SESSION['usuario']=$usuario;
-            $this->_ayuda->redireccionUrl('index');         
+            $this->_sesion->iniciarSesion('_s', Cf_SESION_PARAMETRO_SEGURO);
+            $_SESSION['usuario']=$usuario;             
+            $_SESSION['id_usuario']=$valida['id_usuario'];
+            $_SESSION['nivel']=$valida['nivel']; 
+            $this->_ayuda->redireccionUrl('data/index');         
         }
        $this->_ayuda->redireccionUrl('usuario');
         
