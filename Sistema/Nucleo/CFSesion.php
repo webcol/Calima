@@ -89,7 +89,7 @@ class CFSesion
    $host = $this->host;
    $user = $this->usuario;
    $pass = $this->clave;
-   $name = $this->bdnombree;
+   $name = $this->bdnombre;
    
    $mysqli = new \mysqli($host, $user, $pass, $name);
    $this->db = $mysqli;
