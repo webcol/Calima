@@ -60,9 +60,10 @@ class instaladorControlador extends Sisnuc\CFControlador
     public function crearBaseDatos(){
         
        
-        $this->_basedatos->crearTablas();
-        $this->_ayuda->redireccionUrl('');
-       
+        $this->_basedatos->crearTablas();	
+			
+        $this->_ayuda->redireccionUrl('usuario');
+        
     }
     
     public function verificarBd(){
@@ -86,6 +87,7 @@ class instaladorControlador extends Sisnuc\CFControlador
              if($a){
                  
                 $this->paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$usuariobd,$clavebd,$config);
+				
              }else{
                  $this->_ayuda->redireccionUrl('instalador?error="Los datos que estas ingresando no coniciden con los de la BD"');
              }
@@ -97,9 +99,8 @@ class instaladorControlador extends Sisnuc\CFControlador
         
                
                
-               
-        //$this->crearBaseDatos($_POST['hostbd'],$_POST['nombrebd'],$_POST['usuariobd'],$_POST['clavebd']);
-        //Cf_Configuracion.php
+             
+       
         $file = fopen(RUTA_NUCLEO."CFConfiguracion.php", "w");
         
         fwrite($file, "<?php " . PHP_EOL.PHP_EOL);
@@ -175,6 +176,9 @@ class instaladorControlador extends Sisnuc\CFControlador
         
         fwrite($file, "/*  en el controlador concatena la constante con el llamado a la funcion generarCadenaAleatoria() de Cf_PHPSeguridad */" . PHP_EOL);
         fwrite($file, "define('Cf_CSRF_SECRET','Cfbeta');" . PHP_EOL.PHP_EOL);
+		
+		fwrite($file, "/*  Si usted va a utilizar SSL debe de cambiar a true */" . PHP_EOL);
+        fwrite($file, "define('Cf_SESION_PARAMETRO_SEGURO','false');" . PHP_EOL.PHP_EOL);
         
         fwrite($file, "/* #base de datos */" . PHP_EOL. PHP_EOL);
         
@@ -188,8 +192,8 @@ class instaladorControlador extends Sisnuc\CFControlador
         fwrite($file, "");
         fclose($file);
         
-        $this->_ayuda->redireccionUrl('instalador/crearBaseDatos');
-        //$this->crearBaseDatos();
+		$this->_ayuda->redireccionUrl('instalador/crearBaseDatos');
+		
         }
         
     }
