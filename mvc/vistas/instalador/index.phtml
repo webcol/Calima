@@ -1,5 +1,3 @@
-<?php ob_start();?>
-<?php $_SESSION['something']='A value.'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,8 +47,8 @@
 
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1>Calima Framework Version 1.0 beta</h1>
-        <p class="lead">A continuación usted podrá instalar las tablas de configuración de Cf llenando los campos del formulario.<br>usted debe de tener previamente creada la base de datos.</p><p>Si usted no sabe como crear la base de datos debe ver el siguiente .<a target="_blank" href="https://www.youtube.com/watch?v=xo1Y4h6t-yM">video en youtube</a></p>
+        <h1>Calima Framework Versión 1.1.5</h1>
+        <p class="lead">A continuación usted podrá instalar las tablas de configuración de Cf llenando los campos del formulario.<br>usted debe de tener previamente creada la base de datos y la constante Cf_BASE_URL configurada con su URL que esta en la ruta: Sistema/Nucleo/CFConfiguracion.php.</p><p>Si usted no sabe como crear la base de datos debe ver el siguiente .<a target="_blank" href="https://www.youtube.com/watch?v=xo1Y4h6t-yM">video en youtube<br></a></p>
         
       </div>
       <?php if(isset($_GET['error'])){ ?>
