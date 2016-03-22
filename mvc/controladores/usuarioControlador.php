@@ -9,7 +9,8 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
     public function __construct() {
         parent::__construct();
                
-        // cargamos la clase ayudantes para usar sus metodos de ayuda       
+        // cargamos la clase ayudantes para usar sus metodos de ayuda  
+        // esta clase por que no se carga global ya que todos lo controladores la van a usar ??
         $this->_ayuda= new Sistema\Ayudantes\CFPHPAyuda;        
         $this->_seg= new Sistema\Ayudantes\CFPHPSeguridad;
         $this->_sesion=new Sistema\Nucleo\CFSesion();       
@@ -17,6 +18,7 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
     
     public function index(){     
         $this->_sesion->iniciarSesion('_s', Cf_SESION_PARAMETRO_SEGURO);
+        // si se tiene una clase para la creacion de sessiones por que se llama el session_destroy directamente ??
         session_destroy();
         $this->_vista->titulo = 'CalimaFramework Login';
         $this->_vista->error = 'CalimaFramework Login';
