@@ -101,6 +101,9 @@ else
     $lang = 'es'; // por defecto el idioma para el app es español puede ser en, bt, de, zh
 }
  
+$lang_file = 'lang.'.(empty($lang)?'en':$lang).'.php'; 
+// optimizacion de codigo al evaluar la llamda del archivo lang
+/* 
 switch ($lang) {
   case 'en':
   $lang_file = 'lang.en.php';
@@ -130,7 +133,7 @@ switch ($lang) {
   $lang_file = 'lang.en.php';
  
 }
- 
+*/
 include_once RUTA_LENGUAJES . $lang_file;
 
 //FIN LENGUAJES
