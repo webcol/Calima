@@ -36,10 +36,10 @@ ESTRUCTURA DE DIRECTORIOS
 
 ```
 mvc/                    implementa el modelo vista controlador
-public_/                archivos y direcrectorios públicos css, js, imágenes
+public_/                archivos y direcrectorios publicos css, js, imagenes
 ejemplo_bd/             Ejemplo de la bsase de datos .sql
-sistema/                ayudantes, librerías, servicios, núcleo
-temporal/               información temporal 
+sistema/                ayudantes, librerias, servicios, nucleo
+temporal/               informaciï¿½n temporal 
 ```
 
 
@@ -54,7 +54,7 @@ Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y
 REQUERIMIENTOS MINIMOS
 -------------------------
 
-PHP 5.3.+
+PHP 5.4.+
 Apache 2.2.+
 Mysql 5.2.+
 
@@ -72,7 +72,7 @@ Tu puede colaborar con:
 
 * [Report issues](https://github.com/webcol/Calima/issues)
 * Colabora con
-    - Ideas de diseÃ±o o themas para el marco de trabajo.
+    - Ideas de diseÃ±o o templates para el marco de trabajo.
     - Desarrollo de ayudantes, librerÃ­as o servicios web.
     - DocumentaciÃ³n libros, documentar cÃ³digo, wiki, blog, foro
     - EnvÃ­a errores detectados o nuevas propuestas con las que crees podrÃ­as ayudar
