@@ -37,21 +37,25 @@ class CFSolicitud
             $url = explode('/', $url);
             $url = array_filter($url);
             
-            $this->_controlador = strtolower(array_shift($url));
-            $this->_metodo = strtolower(array_shift($url));
-            $this->_argumentos = $url;
+            //$this->_controlador = strtolower(array_shift($url));
+            //$this->_metodo = strtolower(array_shift($url));
+            //$this->_argumentos = $url;
+            
+            $this->setControlador(strtolower(array_shift($url)));
+            $this->setMetodo(strtolower(array_shift($url)));
+            $this->setArgumentos($url);
         }       
         
-        if(!$this->_controlador){
-            $this->_controlador = CONTROLADOR_INICIAL;
+        if(!$this->getControlador()){
+            $this->setControlador(CONTROLADOR_INICIAL);
         }
         
-        if(!$this->_metodo){
-            $this->_metodo = 'index';
+        if(!$this->getMetodo()){
+            $this->setMetodo('index');
         }
         
-        if(!isset($this->_argumentos)){
-            $this->_argumentos = array();
+        if(!isset($this->getArgumentos())){
+            $this->setArgumentos(array());
         }
     }
     
@@ -68,5 +72,20 @@ class CFSolicitud
     public function getArgumentos()
     {
         return $this->_argumentos;
+    }
+    
+    public function setControlador($controlador)
+    {
+        return $this->_controlador=$controlador;
+    }
+    
+    public function setMetodo($metodo)
+    {
+        return $this->_metodo=$metodo;
+    }
+    
+    public function setArgumentos($argumento)
+    {
+        return $this->_argumentos=$argumento;
     }
 }
