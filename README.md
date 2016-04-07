@@ -78,6 +78,22 @@ Tu puede colaborar con:
     - Envía errores detectados o nuevas propuestas con las que crees podrías ayudar
 
 
+COLABORADORES HOY
+-----------------
+
+Calima Framework agradece a las siguientes personas por creer en este proyecto y sin buscar algun beneficio han destinado parte de su tiempo para ayudar en el mejoramiento del sistema, 
+Les deseamos de parte de Webcol muchas bendiciones y esperamos que cada dia esta comunidad sea mas grande y dejemos en alto nuestro sello como HispanoHablantes que somos.
+
+Top 10 de participantes no dejes de estar aquí:
+
+
+* [Efrain Restrepo](https://www.linkedin.com/in/efrasoft)
+	- Desarrollador Fundador
+* Ramon Serrano
+    - Mejoras en el Nucleo de Cf.    
+* [Haomaro] (https://github.com/haomaro)
+	- Desarrollo de ayudantes y mejoras en el codigo
+	
 DONACIONES
 -----------------
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -105,4 +121,3 @@ Licencia
 -----------------
 
 Calima framework Cf es software openSourced bajo [Licencia Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
-
