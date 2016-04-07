@@ -54,7 +54,7 @@ class CFSolicitud
             $this->setMetodo('index');
         }
         
-        if(!isset($this->getArgumentos())){
+        if(null!==($this->getArgumentos())){
             $this->setArgumentos(array());
         }
     }
