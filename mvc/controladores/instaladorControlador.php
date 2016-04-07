@@ -95,7 +95,7 @@ class instaladorControlador extends Sisnuc\CFControlador
     }
 
 
-    public function paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$usuariobd,$clavebd,$config){
+    public function paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$clavebd,$config){
         
                
                
