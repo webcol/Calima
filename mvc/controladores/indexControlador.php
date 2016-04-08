@@ -49,7 +49,7 @@ class indexControlador extends Sisnuc\CFControlador
         $this->_ayuda= new Sisayu\CFPHPAyuda;
         //$this->cargaAyudante('CfPHPAyuda');
 		//$this->cargaAyudante('CfPHPSeguridad');
-        $this->_seg= new Sisayu\CfPHPSeguridad;
+        $this->_seg= new Sisayu\CFPHPSeguridad;
         
         $this->_sesion=new Sisnuc\CFSesion();
          
