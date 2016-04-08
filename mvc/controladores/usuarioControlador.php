@@ -53,7 +53,7 @@ class usuarioControlador extends \Sistema\Nucleo\CFControlador
     public function valida(){
         if(isset($_POST['usuario'])){
         $usuario=$_POST['usuario'];
-        echo $clave=$this->_seg->cifrado($this->_seg->filtrarTexto($_POST['clave']));
+        $clave=$this->_seg->cifrado($this->_seg->filtrarTexto($_POST['clave']));
         
         $datosUser = $this->cargaModelo('usuario');
         $valida=$datosUser->seleccionUsuario($usuario, $clave);  
