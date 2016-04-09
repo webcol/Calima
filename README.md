@@ -93,6 +93,9 @@ Top 10 de participantes no dejes de estar aquí:
     - Mejoras en el Nucleo de Cf.    
 * [Haomaro] (https://github.com/haomaro)
 	- Desarrollo de ayudantes y mejoras en el codigo
+* [John Sanchez](https://www.facebook.com/johnn.sanchez?fref=ts)
+	- Diseño de Marca
+	
 	
 DONACIONES
 -----------------
