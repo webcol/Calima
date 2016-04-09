@@ -45,7 +45,7 @@ temporal/               informaci�n temporal
 
 DOCUMENTACION
 -----------------
-
+Libro PDF [Calima Framework 1.5](https://leanpub.com/calimaframeworkphp)
 Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y 
  [Guía de ayuda](http://www.calimaframework.com/blog/) sigue cada página de ayuda y termina sus ejemplos.
 
