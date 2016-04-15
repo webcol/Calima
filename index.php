@@ -79,61 +79,21 @@ define('RUTA_LENGUAJES', SITE_ROOT . 'Sistema'.DS.'lenguajes' . DS);
 //En el directorio sistema lenguajes hay varios archivos php cada uno para crear las constantes en el idioma especifico
 //luego por get capturamos la variable lan al inicio de la aplicacion asi: www.tuapp.com/?lang=de
 
-if(isSet($_GET['lang']))
-{
+$lang = 'es'; // por defecto el idioma para el app es español puede ser en, bt, de, zh
+if(isSet($_GET['lang'])){
     $lang = $_GET['lang'];
- 
-// register the session and set the cookie
-    $_SESSION['lang'] = $lang;
- 
-    setcookie('lang', $lang, time() + (3600 * 24 * 30));
 }
-else if(isSet($_SESSION['lang']))
-{
-    $lang = $_SESSION['lang'];
-}
-else if(isSet($_COOKIE['lang']))
-{
-    $lang = $_COOKIE['lang'];
-}
-else
-{
-    $lang = 'es'; // por defecto el idioma para el app es español puede ser en, bt, de, zh
-}
- 
-$lang_file = 'lang.'.(empty($lang)?'en':$lang).'.php'; 
-// optimizacion de codigo al evaluar la llamda del archivo lang
-/* 
-switch ($lang) {
-  case 'en':
-  $lang_file = 'lang.en.php';
-  break;
- 
-  case 'de':
-  $lang_file = 'lang.de.php';
-  break;
+//en caso de no cumplir la condicion el $lang va ser "es"
 
-  case 'zh':
-  $lang_file = 'lang.zh.php';
-  break;
-
-  case 'pt':
-  $lang_file = 'lang.pt.php';
-  break;
-
-  case 'pt':
-  $lang_file = 'lang.pt.php';
-  break;
-
-  case 'es':
-  $lang_file = 'lang.es.php';
-  break;
- 
-  default:
-  $lang_file = 'lang.en.php';
- 
+//valido que no este creada la sesion ò cookie de lang
+if(!isSet($_SESSION['lang']) || !isSet($_COOKIE['lang'])){
+	// register the session and set the cookie
+	$_SESSION['lang'] = $lang;
+	setcookie('lang', $lang, time() + (3600 * 24 * 30));
 }
-*/
+
+$lang_file = 'lang.'.$lang.'.php'; 
+
 include_once RUTA_LENGUAJES . $lang_file;
 
 //FIN LENGUAJES
