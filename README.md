@@ -1,4 +1,4 @@
-Calima Framework  PHP  Vs 1.1.5
+#Calima Framework  PHP  Vs 1.1.5#
 ===========================
 
 [![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -31,7 +31,7 @@ buscamos una fácil instalación un código claro, limpio en español, basado en
 [![Code Climate](https://codeclimate.com/github/webcol/Calima/badges/gpa.svg)](https://codeclimate.com/github/webcol/Calima)
 [![Test Coverage](https://codeclimate.com/github/webcol/Calima/badges/coverage.svg)](https://codeclimate.com/github/webcol/Calima)
 
-ESTRUCTURA DE DIRECTORIOS
+##ESTRUCTURA DE DIRECTORIOS##
 ------------------
 
 ```
@@ -43,7 +43,7 @@ temporal/               informaci�n temporal
 ```
 
 
-DOCUMENTACION
+##DOCUMENTACION##
 -----------------
 Libro PDF [Calima Framework 1.5](https://leanpub.com/calimaframeworkphp)
 Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y 
@@ -51,7 +51,7 @@ Cf PHP [Clases de Referencia](http://www.calimaframework.com/clases/) y
 
 
 
-REQUERIMIENTOS MINIMOS
+##REQUERIMIENTOS MINIMOS##
 -------------------------
 
 PHP 5.4.+
@@ -61,7 +61,7 @@ Mysql 5.2.+
 Multiplataforma
 
 
-COLABORA
+##COLABORA##
 -----------------
 
 Si crees que puedes ayudar de alguna manera no lo dudes y ponte en contacto con la comunidad Cf
@@ -78,7 +78,7 @@ Tu puede colaborar con:
     - Envía errores detectados o nuevas propuestas con las que crees podrías ayudar
 
 
-COLABORADORES HOY
+##COLABORADORES HOY##
 -----------------
 
 Calima Framework agradece a las siguientes personas por creer en este proyecto y sin buscar algun beneficio han destinado parte de su tiempo para ayudar en el mejoramiento del sistema, 
@@ -97,7 +97,7 @@ Top 10 de participantes no dejes de estar aquí:
 	- Diseño de Marca
 	
 	
-DONACIONES
+##DONACIONES##
 -----------------
 <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
@@ -107,7 +107,7 @@ DONACIONES
 </form>
 
 
-CONTACTOS
+##CONTACTOS##
 -----------------
 
 http://calimaframework.com/ <br>
@@ -120,7 +120,7 @@ http://www.meetup.com/CalimaFramework/members/ <br>
 
 <img src="http://www.calimaframework.com/public_/images/Cf.PNG"/>
 
-Licencia
+##Licencia##
 -----------------
 
 Calima framework Cf es software openSourced bajo [Licencia Mit] (http://es.wikipedia.org/wiki/Licencia_MIT)
