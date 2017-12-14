@@ -79,14 +79,16 @@ class instaladorControlador extends Sisnuc\CFControlador
                $hostbd="'".$_POST['hostbd']."'";
                $nombrebd="'".$_POST['nombrebd']."'";
                $usuariobd="'".$_POST['usuariobd']."'";
-               $clavebd="'".$_POST['clavebd']."'";
+              echo $clavebd="'".$_POST['clavebd']."'";
                $config="'".$_POST['config']."'";
                
              $a= $this->_basedatos->verificarBdM($_POST['nombrebd'],$_POST['usuariobd'],$_POST['clavebd']);
+
+                     
              
              if($a){
                  
-                $this->paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$usuariobd,$clavebd,$config);
+                $this->paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$clavebd,$config);
 				
              }else{
                  $this->_ayuda->redireccionUrl('instalador?error="Los datos que estas ingresando no coniciden con los de la BD"');
@@ -98,9 +100,11 @@ class instaladorControlador extends Sisnuc\CFControlador
     public function paso1($proyecto,$analytics,$hostbd,$nombrebd,$usuariobd,$clavebd,$config){
         
                
-               
+         echo $proyecto; 
              
-       
+        chmod (RUTA_NUCLEO."CFConfiguracion.php", 0777);
+      //chmod($hostbd.$proyecto."Sistema/Nucleo/CFConfiguracion.php", 0755);
+
         $file = fopen(RUTA_NUCLEO."CFConfiguracion.php", "w");
         
         fwrite($file, "<?php " . PHP_EOL.PHP_EOL);
