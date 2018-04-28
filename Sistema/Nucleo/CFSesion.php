@@ -51,7 +51,7 @@ class CFSesion
   /* public function __destruct() {
       session_regenerate_id(true);
    }*/
-           function iniciarSesion($session_name, $secure) {
+               function iniciarSesion($session_name, $secure) {
       // Make sure the session cookie is not accessable via javascript.
       $httpunico = true;
 
@@ -81,7 +81,7 @@ class CFSesion
      
       // This line regenerates the session and delete the old one. 
       // It also generates a new encryption key in the database. 
-       
+       session_regenerate_id(true);
    }
 
 // ingrese la informacion de conexion a su base de datos, debe ser igual a la que esta en CFConfiguracion.php

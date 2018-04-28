@@ -72,6 +72,12 @@ define('Cf_CSRF_SECRET','Cfbeta');
 /*  Si usted va a utilizar SSL debe de cambiar a true */
 define('Cf_SESION_PARAMETRO_SEGURO','false');
 
+/*  Cree niveles de usuario aqui solo cambie el numero aqui y en la tabla perfiles  */
+define('root','1234');
+define('admin','2345');
+define('editor','3456');
+define('publicador','2233');
+
 /* #base de datos */
 
 /* Configuracion de tu base de datos */
