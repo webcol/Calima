@@ -1,4 +1,4 @@
-#Calima Framework  PHP  Vs 1.5.0#
+#Calima Framework  PHP  Vs 1.5.1#
 ===========================
 
 [![Join the chat at https://gitter.im/webcol/Calima](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/webcol/Calima?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -10,7 +10,7 @@ Calima Framework agradece a la comunidad que de alguna manera desea dar apoyo a 
 Si tienes deseos de ayudar recuerda que tu ayuda debe ser para esta version de Cf en español.
 
 
-Cf  Trae embebido [Twitter bootstrap 3.3.6] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
+Cf  Trae embebido [bootstrap 4.0] (http://getbootstrap.com/). Esta construido basado en metodologías de distintos Framework php y usa algunos ejemplos opensource editados, 
 buscamos una fácil instalación un código claro, limpio en español, basado en el modelo MVC bajo el paradigma orientado a objetos.
 
  
