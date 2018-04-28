@@ -40,12 +40,13 @@
 		"php": ">=5.4.0",
                 "doctrine/orm": "2.*",
                 "swiftmailer/swiftmailer": "5.*",
-                "itbz/fpdf": "1.*",                
-                "phpoffice/phpexcel": "1.8.*",                
+                "setasign/fpdf": "1.*",
+                "phpoffice/phpspreadsheet": "1.*",               
                 "league/csv": "7.*",
                 "siriusphp/upload": "2.*",
                 "jasongrimes/paginator": "1.*",
                 "datatables/datatables": "1.*",
+                "monolog/monolog":  "1.23.*",
                 "smottt/wideimage": "1.*"
                 
 	},
@@ -53,15 +54,14 @@
         
 	"autoload": {
 		"classmap" : [
-			"Sistema/Ayudantes/",
-			"Sistema/Librerias/"
+			"Sistema/Ayudantes/"
 			
 		],
                  "psr-4": {
                     
                     "Sistema\\Nucleo\\": "Sistema/Nucleo",
-                    "Sistema\\Ayudantes\\": "Sistema/Ayudantes",
-                    "Sistema\\Librerias\\": "Sistema/Librerias"
+                    "Sistema\\Ayudantes\\": "Sistema/Ayudantes"
+                    
                     
 
                 }
