@@ -41,7 +41,7 @@ define('CF_PATH_DATA', dirname(__FILE__) . '/Cf-data');
 #Configuracion Basica
 
 /* La siguiente CONSTANTE permite el apuntapiento para archivos js, css, imagenes desde la vista hacia el directorio _public */
-define('Cf_BASE_URL', 'http://localhost/calima/');
+define('Cf_BASE_URL', 'http://localhost/Calima/');
 
 /* definimos un controlador inicial en nuestro proyecto */
 define('CONTROLADOR_INICIAL', 'index');
