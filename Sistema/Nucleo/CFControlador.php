@@ -37,7 +37,7 @@ abstract class CFControlador
     protected function cargaLib($libreria){
         $rutaLib = RUTA_LIBS . $libreria . '.php';
         if(is_readable($rutaLib)){
-            require_once $rutaLib;
+            require_once $rutaLib;//deberia maperas con composer sugerencia
            //echo 'libreria cargada';
         }
         else {
@@ -49,7 +49,7 @@ abstract class CFControlador
         $modelo=$modelo.'Modelo';
        $rutaMod = RUTA_MOD . $modelo . '.php';
         if(is_readable($rutaMod)){
-            require_once $rutaMod;
+            require_once $rutaMod;//deberia maperas con composer sugerencia
             $modelo = new $modelo;
             return $modelo;
            //echo 'modelo cargado';
